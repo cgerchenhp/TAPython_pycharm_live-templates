@@ -1,0 +1,735 @@
+<templateSet group="TAPython">
+  <template name="SExpandableArea" value="&quot;SExpandableArea&quot;: {&#10;    &quot;HeaderContent&quot;: {&#10;        $HeadContent$&#10;    },&#10;    &quot;BodyContent&quot;: {&#10;        $BodyContent$&#10;    }&#10;}" description="SExpandableArea" toReformat="false" toShortenFQNames="true">
+    <variable name="HeadContent" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="BodyContent" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SBorder" value="&quot;SBorder&quot;: {&#10;    &quot;BorderImage&quot;: {&#10;        &quot;Style&quot;: &quot;FEditorStyle&quot;,&#10;        &quot;Brush&quot;: &quot;ToolPanel.DarkGroupBorder&quot;&#10;    },&#10;    &quot;Content&quot;:{&#10;        $VAR$&#10;    }&#10;}" description="SBorder" toReformat="false" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="Chameleon" value="{&#10;&#9;&quot;TabLabel&quot;: &quot;A Chameleon Tool&quot;,&#10;&#9;&quot;InitTabSize&quot;: [400, 250],&#10;&#9;&quot;InitTabPosition&quot;: [200, 100],&#10;    &quot;InitPyCmd&quot;: &quot;import $Package$; $tool_inst$ = $your_class$(%JsonPath)&quot;,&#10;    &quot;Root&quot;: {&#10;        $Content$&#10;    }&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="Package" expression="" defaultValue="YourPackage" alwaysStopAt="true" />
+    <variable name="tool_inst" expression="" defaultValue="this_tool_inst" alwaysStopAt="true" />
+    <variable name="your_class" expression="" defaultValue="your_class" alwaysStopAt="true" />
+    <variable name="Content" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SBox" value="&quot;SBox&quot;:&#10;{&#10;    &quot;MinDesiredWidth&quot;: 200,&#10;    &quot;MinDesiredHeight&quot;: 80,&#10;    &quot;Content&quot;: {&#10;        $Content$&#10;    }&#10;}" description="SBox" toReformat="false" toShortenFQNames="true">
+    <variable name="Content" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SBreadcrumbTrail" value="&quot;SBreadcrumbTrail&quot;:&#10;{&#10;    &quot;Aka&quot;: &quot;$Aka$&quot;,&#10;    &quot;type&quot;: &quot;string&quot;,&#10;    &quot;ButtonContentPadding&quot;: 1,&#10;    &quot;OnCrumbClick&quot;: &quot;print(%)&quot;&#10;}" description="SBreadcrumbTrail" toReformat="false" toShortenFQNames="true">
+    <variable name="Aka" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SButton" value="&quot;SButton&quot;:&#10;{&#10;    &quot;Text&quot;: &quot;$Label$&quot;,&#10;    &quot;HAlign&quot;: &quot;Center&quot;,&#10;    &quot;VAlign&quot;: &quot;Center&quot;,&#10;    &quot;ContentPadding&quot;: 4,&#10;    &quot;ToolTipText&quot;: &quot;$Label$&quot;,&#10;    &quot;OnClick&quot;: &quot;print('Button $Label$ clicked.')&quot;&#10;}" description="SButton" toReformat="false" toShortenFQNames="true">
+    <variable name="Label" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SCanvas" value="&quot;SCanvas&quot;: {&#10;    &quot;Slots&quot;: [&#10;        {&#10;            &quot;Position&quot;: [95, 0],&#10;            &quot;Size&quot;: [80, 20],&#10;            $ContentA$&#10;        },&#10;        {&#10;            $ContentB$&#10;        }&#10;    ]&#10;}" description="SCanvas" toReformat="false" toShortenFQNames="true">
+    <variable name="ContentA" expression="" defaultValue="&quot;\&quot;SButton\&quot;: { \&quot;Text\&quot;: \&quot;Placeholder A\&quot;}&quot;" alwaysStopAt="true" />
+    <variable name="ContentB" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SCheckBox" value="&quot;SCheckBox&quot;:&#10;{&#10;    &quot;Content&quot;: {&#10;        $content$        &#10;    },&#10;    &quot;Padding&quot;: 6,&#10;    &quot;IsChecked&quot;: true,&#10;    &quot;OnCheckStateChanged&quot;: &quot;print('checked: %'.format(%))&quot;&#10;}" description="SCheckBox" toReformat="false" toShortenFQNames="true">
+    <variable name="content" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SColorBlock" value="&quot;SColorBlock&quot;: &#10;{&#10;    &quot;Color&quot;:[$r$, $g$, $b$, $a$],&#10;    &quot;ColorIsHSV&quot;: false&#10;}" description="SColorBlock" toReformat="false" toShortenFQNames="true">
+    <variable name="g" expression="" defaultValue="&quot;0.5&quot;" alwaysStopAt="true" />
+    <variable name="r" expression="" defaultValue="&quot;0.5&quot;" alwaysStopAt="true" />
+    <variable name="b" expression="" defaultValue="&quot;0.5&quot;" alwaysStopAt="true" />
+    <variable name="a" expression="" defaultValue="&quot;1&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SComboBox" value="&quot;SComboBox&quot;: {&#10;    &quot;Aka&quot;: &quot;$AKA$&quot;,&#10;    &quot;Content&quot;: {&#10;        &quot;Text&quot;: &quot;ComboBox&quot;&#10;    },&#10;    &quot;OptionsSource&quot;: [&#10;        &quot;$OptionA$&quot;,&#10;        &quot;$OptionB$&quot;,&#10;        &quot;$OptionC$&quot;&#10;    ],&#10;    &quot;OnSelectionChanged&quot;: &quot;print(%)&quot;&#10;}" description="SComboBox" toReformat="false" toShortenFQNames="true">
+    <variable name="AKA" expression="" defaultValue="&quot;comboBox_&quot;" alwaysStopAt="true" />
+    <variable name="OptionA" expression="" defaultValue="&quot;OptionA&quot;" alwaysStopAt="true" />
+    <variable name="OptionB" expression="" defaultValue="&quot;OptionB&quot;" alwaysStopAt="true" />
+    <variable name="OptionC" expression="" defaultValue="&quot;OptionC&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SComboButton" value="&quot;SComboButton&quot;: {&#10;    &quot;HAlign&quot;: &quot;Center&quot;,&#10;    &quot;ButtonContent&quot;: {&#10;        &quot;STextBlock&quot;: {&#10;            &quot;Text&quot;: &quot;Choose And Trigger the Command&quot;&#10;        }&#10;    },&#10;    &quot;HasDownArrow&quot;: true,&#10;    &quot;OnGetMenuContent&quot;: {&#10;        &quot;items&quot;: [&#10;            {&quot;name&quot;: &quot;$ITEMA$&quot;          , &quot;Command&quot;: &quot;print('$ITEMA$')&quot; },&#10;            {&quot;name&quot;: &quot;$ITEMB$&quot;          , &quot;Command&quot;: &quot;print('$ITEMB$')&quot; },&#10;            {&quot;name&quot;: &quot;$ITEMC$&quot;          , &quot;Command&quot;: &quot;print('$ITEMC$')&quot; }&#10;        ]&#10;    }&#10;}" description="SComboButton" toReformat="false" toShortenFQNames="true">
+    <variable name="ITEMA" expression="" defaultValue="&quot;ItemA&quot;" alwaysStopAt="true" />
+    <variable name="ITEMB" expression="" defaultValue="&quot;ItemB&quot;" alwaysStopAt="true" />
+    <variable name="ITEMC" expression="" defaultValue="&quot;ItemC&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SDropTarget" value="&quot;SDropTarget&quot;: {&#10;   &quot;Text&quot;: &quot;SDropTarget&quot;,&#10;   &quot;HAlign&quot;: &quot;Center&quot;,&#10;   &quot;OnDrop&quot;: &quot;$YourTool$.on_drop_func(%**kwargs)&quot;,&#10;   &quot;Content&quot;:&#10;   {&#10;        $Content$&#10;   }&#10;}" description="SDropTarget" toReformat="false" toShortenFQNames="true">
+    <variable name="YourTool" expression="" defaultValue="&quot;your_tool&quot;" alwaysStopAt="true" />
+    <variable name="Content" expression="" defaultValue=" &quot;\&quot;SBox\&quot;: {}&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SGridPanel" value="&quot;SGridPanel&quot;:&#10;{&#10;   &quot;FillColumn&quot;: [[0, 0.38], [1, 0.62]],&#10;   &quot;Slots&quot;:&#10;   [&#10;       {&#10;           &quot;Column_Row&quot;: [$ColumnIndex$, $RowIndex$],&#10;           $Column0$&#10;       }&#10;    ]&#10;}" description="SGridPanel" toReformat="false" toShortenFQNames="true">
+    <variable name="ColumnIndex" expression="" defaultValue="&quot;0&quot;" alwaysStopAt="true" />
+    <variable name="RowIndex" expression="" defaultValue="&quot;0&quot;" alwaysStopAt="true" />
+    <variable name="Column0" expression="" defaultValue="&quot;\&quot;SButton\&quot;: { \&quot;Text\&quot;: \&quot;Placeholder A\&quot;, \&quot;ContentPadding\&quot;: 10 }&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SHeader" value="&quot;SHeader&quot;:&#10;{&#10;    &quot;Content&quot;:&#10;    {&#10;        $content$&#10;    }&#10;}" description="SHeader" toReformat="false" toShortenFQNames="true">
+    <variable name="content" expression="" defaultValue="&quot;\&quot;STextBlock\&quot;: { \&quot;Text\&quot;: \&quot;A Header\&quot;, \&quot;Justification\&quot;: \&quot;Center\&quot;}&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SHeaderRow" value="&quot;SHeaderRow&quot;: {&#10;    &quot;Columns&quot;: [&#10;        {&#10;            &quot;DefaultLabel&quot;: $Label$,&#10;            &quot;FillWidth&quot;: 1&#10;        }&#10;    ]&#10;}" description="SHeaderRow" toReformat="false" toShortenFQNames="true">
+    <variable name="Label" expression="" defaultValue="&quot;\&quot;List Label\&quot;&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SHorizontalBox" value="&quot;SHorizontalBox&quot;: &#10;{&#10;    &quot;Slots&quot;: [&#10;        {&#10;            &quot;AutoWidth&quot;: true,&#10;            $ContentA$&#10;        },&#10;        {&#10;            &quot;AutoWidth&quot;: true,&#10;            $ContentB$&#10;        }&#10;    ]&#10;}" description="SHorizontalBox" toReformat="false" toShortenFQNames="true">
+    <variable name="ContentA" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ContentB" expression="" defaultValue="&quot;\&quot;SButton\&quot;: { \&quot;Text\&quot;: \&quot;Placeholder B\&quot;}&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SHyperlink" value="&quot;SHyperlink&quot;: &#10;{   &#10;    &quot;Style&quot;:&#10;    {   &#10;        &quot;Style&quot;: &quot;FEditorStyle&quot;,&#10;        &quot;StyleName&quot;: &quot;Credits.Hyperlink&quot;&#10;    }, &#10;    &quot;Text&quot;: &quot;$YourUrl$&quot;&#10;}" description="SHyperlink" toReformat="false" toShortenFQNames="true">
+    <variable name="YourUrl" expression="" defaultValue="&quot;www.tacolor.xyz/pages/TAPython.html&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SImage" value="&quot;SImage&quot;: {&#10;    &quot;Aka&quot;: &quot;$Aka$&quot;,  &#10;    &quot;ImagePathInPlugin&quot;: &quot;$ImagePath$&quot;&#10;}" description="SImage" toReformat="false" toShortenFQNames="true">
+    <variable name="Aka" expression="" defaultValue="&quot;SImage_A&quot;" alwaysStopAt="true" />
+    <variable name="ImagePath" expression="" defaultValue="&quot;Resources/Icon128.png&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SListView" value="&quot;SListView&quot;: {&#10;    &quot;Aka&quot;: &quot;$Aka$&quot;,&#10;    &quot;ListItemsSource&quot;: [&quot;$ItemA$&quot;, &quot;$ItemB$&quot;, &quot;$ItemC$&quot;],&#10;    &quot;SHeaderRow&quot;: {&#10;        &quot;Columns&quot;: [&#10;            {&#10;                &quot;DefaultLabel&quot;: &quot;$ListLabel$&quot;,&#10;                &quot;FillWidth&quot;: 1&#10;            }&#10;        ]&#10;    },&#10;    &quot;OnSelectedChanged&quot;: &quot;print ('Selected: {}  index: {}'.format(%item, %index))&quot;,&#10;    &quot;OnMouseButtonDoubleClick&quot;: &quot;print ('Double click: {}  index: {}'.format(%item, %index))&quot;&#10;}" description="SListView" toReformat="false" toShortenFQNames="true">
+    <variable name="Aka" expression="" defaultValue="&quot;ListView_A&quot;" alwaysStopAt="true" />
+    <variable name="ItemA" expression="" defaultValue="&quot;Item A&quot;" alwaysStopAt="true" />
+    <variable name="ItemB" expression="" defaultValue="&quot;Item B&quot;" alwaysStopAt="true" />
+    <variable name="ItemC" expression="" defaultValue="&quot;Item C&quot;" alwaysStopAt="true" />
+    <variable name="ListLabel" expression="" defaultValue="&quot;Default Label&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SListViewMultiColumn" value="&quot;SListView&lt;MultiColumn&gt;&quot;: {&#10;    &quot;ItemHeight&quot;: 6,&#10;    &quot;Aka&quot;: &quot;ListViewLeft&quot;,&#10;    &quot;RichText&quot;: true,&#10;    &quot;EnableAnimatedScrolling&quot;: false,&#10;    &quot;SHeaderRow&quot;: {&#10;        &quot;Columns&quot;: [&#10;            {&#10;                &quot;DefaultLabel&quot;: &quot;Property&quot;,&#10;                &quot;FillWidth&quot;: 0.4&#10;            },&#10;            {&#10;                &quot;DefaultLabel&quot;: &quot;Value&quot;,&#10;                &quot;FillWidth&quot;: 0.6&#10;            }&#10;        ]&#10;    },&#10;    &quot;ListItemsSource&quot;: [&#10;        [&quot;$P0$&quot;, &quot;$R0$&quot;]&#10;        , [&quot;$P1$&quot;, &quot;$R1$&quot;]&#10;    ],&#10;    &quot;OnMouseButtonDoubleClick&quot;: &quot;objectDetailViewer.on_listview_DetailListLeft_mouse_button_double_click(%Index)&quot;,&#10;    &quot;OnSelectionChanged&quot;: &quot;objectDetailViewer.ui_on_listview_DetailList_selection_changed(bRight=False)&quot;&#10;}" description="SListViewMultiColumn" toReformat="false" toShortenFQNames="true">
+    <variable name="P0" expression="" defaultValue="&quot;Line 0&quot;" alwaysStopAt="true" />
+    <variable name="R0" expression="" defaultValue="&quot;ValueA&quot;" alwaysStopAt="true" />
+    <variable name="P1" expression="" defaultValue="&quot;Line 1&quot;" alwaysStopAt="true" />
+    <variable name="R1" expression="" defaultValue="&quot;ValueB&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SMultiLineEditableTextBox" value="&quot;SMultiLineEditableTextBox&quot;: &#10;{&#10;    &quot;Text&quot;: &quot;Muti-line Box\nLine 1\nLine 2\nLine 3&quot;,&#10;    &quot;HintText&quot;: &quot;This is a SMultiLineEditableTextBox&quot;,&#10;    &quot;AutoWrapText&quot;: true&#10;}" description="SMultiLineEditableTextBox" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SMultiLineEditableText" value="&quot;SMultiLineEditableText&quot;:&#10;{&#10;    &quot;Text&quot;: &quot;line 1 \nline 2 \nline 3&quot;,&#10;    &quot;HintText&quot;: &quot;SelectAllTextWhenFocused&quot;,&#10;    &quot;Font&quot;: {&#10;        &quot;Style&quot;: &quot;FEditorStyle&quot;,&#10;        &quot;StyleName&quot;: &quot;FontAwesome.16&quot;&#10;    },&#10;    &quot;Margin&quot;: 10,&#10;    &quot;SelectAllTextWhenFocused&quot;: true,&#10;    &quot;OnTextChanged&quot;: &quot;print(%)&quot;,&#10;    &quot;OnTextCommitted&quot;: &quot;print('input text: {}'.format(%))&quot;&#10;}" description="SMultiLineEditableText" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SOverlay" value="&quot;SOverlay&quot;: {&#10;    &quot;Slots&quot;:&#10;    [&#10;        {&#10;            &quot;SImage&quot;: {&#10;                &quot;Aka&quot;: &quot;AImage&quot;,&#10;                &quot;ImagePathInPlugin&quot;: &quot;Resources/PythonIcon_128x.png&quot;&#10;            }&#10;        },&#10;        {&#10;            &quot;Padding&quot;: 10,&#10;            $Content$&#10;        }&#10;    ]&#10;}" description="SOverlay" toReformat="false" toShortenFQNames="true">
+    <variable name="Content" expression="" defaultValue="&quot;\&quot;SButton\&quot;: { \&quot;Text\&quot;: \&quot;This is a button over the image\&quot;, \&quot;VAlign\&quot;: \&quot;Center\&quot;, \&quot;ButtonColorAndOpacity\&quot;: [1, 1, 1, 0.5] }&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SProgressBar" value="&quot;SProgressBar&quot;:&#10;{&#10;    &quot;Aka&quot;: &quot;$Aka$&quot;,&#10;    &quot;FillType&quot;: &quot;LeftToRight&quot;,&#10;    &quot;Percent&quot;: &quot;0.5&quot;&#10;}" description="SProgressBar" toReformat="false" toShortenFQNames="true">
+    <variable name="Aka" expression="" defaultValue="&quot;ProgressBar_A&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SRichTextBlock" value="&quot;SRichTextBlock&quot;:&#10;{&#10;    &quot;Text&quot;: &quot;$Text$&quot;&#10;}" description="SRichTextBlock" toReformat="false" toShortenFQNames="true">
+    <variable name="Text" expression="" defaultValue="&quot;&lt;RichTextBlock.Bold&gt;Blod&lt;/&gt;  &lt;RichTextBlock.TextHighlight&gt;Highlight&lt;/&gt;  &lt;Credits.H2&gt;Unreal&lt;/&gt;&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SRichTextBlock ExampleA" value="&quot;SRichTextBlock&quot;: {&#10;    &quot;Text&quot;: &quot;&lt;RichText.red&gt;Red&lt;/&gt; &lt;RichText.green&gt;Green&lt;/&gt; &lt;RichText.cyan&gt;Rich text Wrapped by&lt;/&gt;&lt;TextStyle FontFamily=\&quot;Roboto\&quot; FontSize=\&quot;13\&quot; FontStyle=\&quot;Italic\&quot; FontColor=\&quot;(R=1, G=1,B=0,A=1)\&quot;&gt;  'WrapTextAt'&lt;/&gt;\n Torquent nostra lacus pulvinar leo. Facilisi etiam pede dapibus, id nec condimentum mollis gravida Mi fringilla nibh. Ipsum vestibulum, congue venenatis, sem netus. Ipsum duis, class semper Arcu phasellus nulla arcu. Curabitur, quisque. Leo odio ultricies penatibus.&quot;,&#10;    &quot;AutoWrapText&quot;: true,&#10;    &quot;Justification&quot;: &quot;Left&quot;,&#10;    &quot;LineHeightPercentage&quot;: 1.5,&#10;    &quot;Margin&quot;: 30,&#10;    &quot;MinDesiredWidth&quot;: 150,&#10;    &quot;WrapTextAt&quot;: 200,&#10;    &quot;WrappingPolicy&quot;: &quot;AllowPerCharacterWrapping&quot;,&#10;    &quot;Marshaller&quot;: &quot;ChameleonRichText&quot;&#10;}" description="SRichTextBlock With Marshaller" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SRichTextBlock ExampleB" value="&quot;SRichTextBlock&quot;: {&#10;    &quot;Text&quot;: &quot;&lt;TextStyle FontFamily=\&quot;Roboto\&quot; FontSize=\&quot;11\&quot; FontStyle=\&quot;Bold\&quot; FontColor=\&quot;(R=0,G=1,B=0,A=0.5)\&quot;&gt;This is a hyperlink: &lt;/&gt;&lt;a id=\&quot;browser\&quot; href=\&quot;https:\/\/www.unrealengine.com/\&quot; style=\&quot;RichText.Editor.Hyperlink\&quot;&gt;Unreal Engine&lt;/&gt;&quot;,&#10;    &quot;Marshaller&quot;: &quot;ChameleonRichText&quot;&#10;}" description="SRichTextBlock With html Marshaller" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SScrollBox" value="&quot;SScrollBox&quot;: {&#10;    &quot;Orientation&quot;: &quot;Vertical&quot;,&#10;    &quot;Slots&quot;:&#10;    [&#10;        {&#10;            $Content$     &#10;        }&#10;    ]&#10;}" description="SScrollBox" toReformat="false" toShortenFQNames="true">
+    <variable name="Content" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SSearchBox" value="&quot;SSearchBox&quot;: &#10;{&#10;    &quot;HintText&quot;: &quot;Type Search Text&quot;,&#10;    &quot;ToolTipText&quot;: &quot;Tool Tip&quot;,&#10;    &quot;OnTextChanged&quot;: &quot;$Cmd$(%)&quot;,&#10;    &quot;OnTextCommitted&quot;: &quot;$Cmd$(%)&quot;,&#10;    &quot;SelectAllTextWhenFocused&quot;: false,&#10;    &quot;DelayChangeNotificationWhiteTyping&quot;: true&#10;}" description="SSearchBox" toReformat="false" toShortenFQNames="true">
+    <variable name="Cmd" expression="" defaultValue="&quot;print&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SSeparator" value="&quot;SSeparator&quot;:&#10;{&#10;    &quot;Thickness&quot;:5,&#10;    &quot;Orientation&quot;: &quot;Horizontal&quot;&#10;}" description="SSeparator" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SSlider" value="&quot;SSlider&quot;:&#10;{&#10;    &quot;Orientation&quot;: &quot;$Dir$&quot;,&#10;    &quot;Value&quot;: 0.5,&#10;    &quot;Locked&quot;: false,&#10;    &quot;OnValueChanged&quot;: &quot;print(%)&quot;&#10;}" description="SSlider" toReformat="false" toShortenFQNames="true">
+    <variable name="Dir" expression="enum(&quot;Horizontal&quot;, &quot;Vertical&quot;)" defaultValue="&quot;Horizontal&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SSpacer" value="&quot;SSpacer&quot;:&#10;{&#10;    &quot;Size&quot;: [100, 50]&#10;}" description="SSpacer" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SSpinBox" value="&quot;SSpinBox&quot;: &#10;{&#10;    &quot;Type&quot;: &quot;int&quot;,&#10;    &quot;Value&quot;: 10,&#10;    &quot;MinValue&quot;: 1,&#10;    &quot;MaxValue&quot;: 8192,&#10;    &quot;MinSliderValue&quot;: 1,&#10;    &quot;maxSliderValue&quot;: 8192,&#10;    &quot;Delta&quot;: 1,&#10;    &quot;OnValueChanged&quot;: &quot;print(%)&quot;&#10;}" description="SSpinBox" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SSplitter" value="&quot;SSplitter&quot;: {&#10;    &quot;Orientation&quot;: &quot;Horizontal&quot;,&#10;    &quot;PhysicalSplitterHandleSize&quot;: 4,&#10;    &quot;ResizeMode&quot;: &quot;FixedPosition&quot;,&#10;    &quot;Slots&quot;: [&#10;        {&#10;            &quot;Value&quot;: 0.4,&#10;            $ContentA$&#10;        },&#10;        {&#10;            &quot;Value&quot;: 0.6,&#10;            $ContentB$&#10;        }&#10;&#10;    ]&#10;}" description="SSplitter" toReformat="false" toShortenFQNames="true">
+    <variable name="ContentA" expression="" defaultValue="&quot;\&quot;SButton\&quot;: { \&quot;Text\&quot;: \&quot;Placeholder A\&quot;, \&quot;ContentPadding\&quot;: 10 }&quot;" alwaysStopAt="true" />
+    <variable name="ContentB" expression="" defaultValue="&quot;\&quot;SButton\&quot;: { \&quot;Text\&quot;: \&quot;Placeholder B\&quot;, \&quot;ContentPadding\&quot;: 10 }&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="STextBlock" value="&quot;STextBlock&quot;:&#10;{&#10;    &quot;Text&quot;: &quot;$Text$&quot;&#10;}" description="STextBlock" toReformat="false" toShortenFQNames="true">
+    <variable name="Text" expression="" defaultValue="&quot;Text Content&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="STextBlock Example" value="&quot;STextBlock&quot;:&#10;{&#10;    &quot;Text&quot;: &quot;Text Content&quot;,&#10;    &quot;ColorAndOpacity&quot;: [0, 0.5, 1, 1],&#10;    &quot;Font&quot;: {&#10;        &quot;Style&quot;: &quot;FEditorStyle&quot;,&#10;        &quot;StyleName&quot;: &quot;FontAwesome.16&quot;&#10;    },&#10;    &quot;ShadowOffset&quot;: [2, 2],&#10;    &quot;ShadowColorAndOpacity&quot;: [0, 0, 0, 0.75],&#10;    &quot;Justification&quot;: &quot;Left&quot;&#10;}" description="STextBlock with most parameters" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SThrobber" value="&quot;SThrobber&quot;:&#10;{&#10;    &quot;NumPieces&quot;: 3,&#10;    &quot;Animate&quot;: &quot;$Animation$&quot;&#10;} " description="SThrobber" toReformat="false" toShortenFQNames="true">
+    <variable name="Animation" expression="enum(&quot;Vertical&quot;, &quot;Horizontal&quot;, &quot;Opacity&quot;, &quot;VerticalAndOpacity&quot;, &quot;None&quot;, &quot;All&quot;)" defaultValue="VerticalAndOpacity" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="STreeView" value="&quot;STreeView&quot;:&#10;{&#10;    &quot;Aka&quot;: &quot;$Aka$&quot;,&#10;    &quot;SHeaderRow&quot;: {&#10;        &quot;Columns&quot;: [&#10;            {&#10;                &quot;DefaultLabel&quot;: &quot;Tree View List&quot;,&#10;                &quot;FillWidth&quot;: 1&#10;            }&#10;        ]&#10;    },&#10;    &quot;TreeItemSource&quot;: [&quot;ItemA&quot;, &quot;ItemB&quot;, &quot;ItemC&quot;, &quot;ItemD&quot;, &quot;ItemE&quot;, &quot;ItemF&quot; ],&#10;    &quot;TreeItemParentIndices&quot;: [-1, 0, 0, 2, 1, 1]&#10;}" description="STreeView" toReformat="false" toShortenFQNames="true">
+    <variable name="Aka" expression="" defaultValue="&quot;TreeViewA&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SUniformGridPanel" value="&quot;SUniformGridPanel&quot;: {&#10;    &quot;Slots&quot;: [&#10;        {&#10;            &quot;Column_Row&quot;: [0, 0],&#10;            $ContentA$&#10;        },&#10;        {&#10;            &quot;Column_Row&quot;: [1, 0],&#10;            $ContentB$&#10;        },&#10;        {&#10;            &quot;Column_Row&quot;: [2, 0],&#10;            $ContentC$&#10;        },&#10;        {&#10;            &quot;Column_Row&quot;: [0, 1],&#10;            $ContentD$&#10;        },&#10;        {&#10;            &quot;Column_Row&quot;: [1, 1],&#10;            $ContentE$&#10;        },&#10;        {&#10;            &quot;Column_Row&quot;: [2, 1],&#10;            $ContentF$&#10;        }&#10;    ]&#10;}" description="SUniformGridPanel" toReformat="false" toShortenFQNames="true">
+    <variable name="ContentA" expression="" defaultValue=" &quot;\&quot;SButton\&quot;: { \&quot;Text\&quot;: \&quot;Placeholder A\&quot;, \&quot;ContentPadding\&quot;: 10 }&quot; " alwaysStopAt="true" />
+    <variable name="ContentB" expression="" defaultValue=" &quot;\&quot;SButton\&quot;: { \&quot;Text\&quot;: \&quot;Placeholder B\&quot;, \&quot;ContentPadding\&quot;: 10 }&quot; " alwaysStopAt="true" />
+    <variable name="ContentC" expression="" defaultValue=" &quot;\&quot;SButton\&quot;: { \&quot;Text\&quot;: \&quot;Placeholder C\&quot;, \&quot;ContentPadding\&quot;: 10 }&quot; " alwaysStopAt="true" />
+    <variable name="ContentD" expression="" defaultValue=" &quot;\&quot;SButton\&quot;: { \&quot;Text\&quot;: \&quot;Placeholder D\&quot;, \&quot;ContentPadding\&quot;: 10 }&quot; " alwaysStopAt="true" />
+    <variable name="ContentE" expression="" defaultValue=" &quot;\&quot;SButton\&quot;: { \&quot;Text\&quot;: \&quot;Placeholder E\&quot;, \&quot;ContentPadding\&quot;: 10 }&quot; " alwaysStopAt="true" />
+    <variable name="ContentF" expression="" defaultValue=" &quot;\&quot;SButton\&quot;: { \&quot;Text\&quot;: \&quot;Placeholder F\&quot;, \&quot;ContentPadding\&quot;: 10 }&quot; " alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SUniformWrapPanel Example" value="&quot;SUniformWrapPanel&quot;: {&#10;    &quot;Slots&quot;:&#10;    [&#10;        {&quot;SImage&quot;: { &quot;DesiredSizeOverride&quot;: [32, 32], &quot;Image&quot;:{ &quot;Style&quot;: &quot;FEditorStyle&quot;, &quot;Brush&quot;: &quot;Perforce.CheckedOut&quot;}}}&#10;        ,{&quot;SImage&quot;: { &quot;DesiredSizeOverride&quot;: [32, 32], &quot;Image&quot;:{ &quot;Style&quot;: &quot;FEditorStyle&quot;, &quot;Brush&quot;: &quot;Perforce.OpenForAdd&quot;}}}&#10;        ,{&quot;SImage&quot;: { &quot;DesiredSizeOverride&quot;: [32, 32], &quot;Image&quot;:{ &quot;Style&quot;: &quot;FEditorStyle&quot;, &quot;Brush&quot;: &quot;Perforce.CheckedOutByOtherUser&quot;}}}&#10;        ,{&quot;SImage&quot;: { &quot;DesiredSizeOverride&quot;: [32, 32], &quot;Image&quot;:{ &quot;Style&quot;: &quot;FEditorStyle&quot;, &quot;Brush&quot;: &quot;Perforce.CheckedOutByOtherUserOtherBranch&quot;}}}&#10;        ,{&quot;SImage&quot;: { &quot;DesiredSizeOverride&quot;: [32, 32], &quot;Image&quot;:{ &quot;Style&quot;: &quot;FEditorStyle&quot;, &quot;Brush&quot;: &quot;Perforce.ModifiedOtherBranch&quot;}}}&#10;        ,{&quot;SImage&quot;: { &quot;DesiredSizeOverride&quot;: [32, 32], &quot;Image&quot;:{ &quot;Style&quot;: &quot;FEditorStyle&quot;, &quot;Brush&quot;: &quot;Perforce.NotAtHeadRevision&quot;}}}&#10;        ,{&quot;SImage&quot;: { &quot;DesiredSizeOverride&quot;: [32, 32], &quot;Image&quot;:{ &quot;Style&quot;: &quot;FEditorStyle&quot;, &quot;Brush&quot;: &quot;Perforce.CheckedOut&quot;}}}&#10;        ,{&quot;SImage&quot;: { &quot;DesiredSizeOverride&quot;: [32, 32], &quot;Image&quot;:{ &quot;Style&quot;: &quot;FEditorStyle&quot;, &quot;Brush&quot;: &quot;Perforce.OpenForAdd&quot;}}}&#10;        ,{&quot;SImage&quot;: { &quot;DesiredSizeOverride&quot;: [32, 32], &quot;Image&quot;:{ &quot;Style&quot;: &quot;FEditorStyle&quot;, &quot;Brush&quot;: &quot;Perforce.CheckedOutByOtherUser&quot;}}}&#10;        ,{&quot;SImage&quot;: { &quot;DesiredSizeOverride&quot;: [32, 32], &quot;Image&quot;:{ &quot;Style&quot;: &quot;FEditorStyle&quot;, &quot;Brush&quot;: &quot;Perforce.CheckedOutByOtherUserOtherBranch&quot;}}}&#10;        ,{&quot;SImage&quot;: { &quot;DesiredSizeOverride&quot;: [32, 32], &quot;Image&quot;:{ &quot;Style&quot;: &quot;FEditorStyle&quot;, &quot;Brush&quot;: &quot;Perforce.ModifiedOtherBranch&quot;}}}&#10;        ,{&quot;SImage&quot;: { &quot;DesiredSizeOverride&quot;: [32, 32], &quot;Image&quot;:{ &quot;Style&quot;: &quot;FEditorStyle&quot;, &quot;Brush&quot;: &quot;Perforce.NotAtHeadRevision&quot;}}}&#10;    ],&#10;    &quot;ToolTipText&quot;: &quot;UniformWrapPannel will auto wrap the children.&quot;&#10;}" description="SUniformWrapPanel Example" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SVerticalBox" value="&quot;SVerticalBox&quot;:&#10;{&#10;    &quot;Slots&quot;: [&#10;        {&#10;            &quot;AutoHeight&quot;: true,&#10;            $ContentA$&#10;        },&#10;        {&#10;            &quot;AutoHeight&quot;: true,&#10;            $ContentB$&#10;        }&#10;    ]&#10;}" description="SVerticalBox" toReformat="false" toShortenFQNames="true">
+    <variable name="ContentA" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ContentB" expression="" defaultValue="&quot;\&quot;SButton\&quot;: { \&quot;Text\&quot;: \&quot;Placeholder B\&quot;}&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="Orientation" value="&quot;Orientation&quot;: &quot;$Orientation$&quot;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="Orientation" expression="enum(&quot;Vertical&quot;, &quot;Horizontal&quot;)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="AutoHeight" value="&quot;AutoHeight&quot;: true," description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="AutoWidth" value="&quot;AutoWidth&quot;: true," description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SGridPanel Example" value="&quot;SGridPanel&quot;:&#10;{&#10;   &quot;FillColumn&quot;: [[0, 0.5], [1, 0.5]],&#10;   &quot;Slots&quot;:&#10;   [&#10;       {&#10;           &quot;Column_Row&quot;: [0, 0],&#10;           $Column0$&#10;       },&#10;       {&#10;           &quot;Column_Row&quot;: [1, 0],&#10;           $Column1$&#10;       },&#10;       {&#10;           &quot;Column_Row&quot;: [0, 1],&#10;           $Column2$&#10;       },&#10;       {&#10;           &quot;Column_Row&quot;: [1, 1],&#10;           $Column3$&#10;       }&#10;    ]&#10;}" description="SGridPanel Example" toReformat="false" toShortenFQNames="true">
+    <variable name="Column0" expression="" defaultValue="&quot;\&quot;SButton\&quot;: { \&quot;Text\&quot;: \&quot;Placeholder Row0 Column0\&quot;, \&quot;ContentPadding\&quot;: 10 }&quot;" alwaysStopAt="true" />
+    <variable name="Column1" expression="" defaultValue="&quot;\&quot;SButton\&quot;: { \&quot;Text\&quot;: \&quot;Placeholder Row0 Column1\&quot;, \&quot;ContentPadding\&quot;: 10 }&quot;" alwaysStopAt="true" />
+    <variable name="Column2" expression="" defaultValue="&quot;\&quot;SButton\&quot;: { \&quot;Text\&quot;: \&quot;Placeholder Row1 Column0\&quot;, \&quot;ContentPadding\&quot;: 10 }&quot;" alwaysStopAt="true" />
+    <variable name="Column3" expression="" defaultValue="&quot;\&quot;SButton\&quot;: { \&quot;Text\&quot;: \&quot;Placeholder Row1 Column1\&quot;, \&quot;ContentPadding\&quot;: 10 }&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="Slots" value="&quot;Slots&quot;: [&#10;    {&#10;        $ContentA$   &#10;    },&#10;    {&#10;        $ContentB$   &#10;    }&#10;]" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="ContentA" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ContentB" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SListView Example" value="&quot;SListView&quot;: {&#10;    &quot;Aka&quot;: &quot;SListViewWithRichText&quot;,&#10;    &quot;ListItemsSource&quot;: [&#10;        &quot;&lt;a id=\&quot;browser\&quot; href=\&quot;https:\/\/www.unrealengine.com/\&quot; style=\&quot;RichText.Editor.Hyperlink\&quot;&gt;Unreal Engine&lt;/&gt;&lt;TextStyle FontFamily=\&quot;Roboto\&quot; FontSize=\&quot;13\&quot; FontStyle=\&quot;Regular\&quot; FontColor=\&quot;(R=1.000000,G=1.000000,B=0.000000,A=1.000000)\&quot;&gt;&lt;/&gt;&quot;,&#10;    &quot;&lt;RichText.red&gt;Red&lt;/&gt; &lt;RichText.green&gt;Green&lt;/&gt; &lt;RichText.cyan&gt;Blue&lt;/&gt;&quot;,&#10;    &quot;&lt;TextStyle FontFamily=\&quot;Roboto\&quot; FontSize=\&quot;12\&quot; FontStyle=\&quot;Regular\&quot; FontColor=\&quot;(R=0,G=1,B=0,A=1)\&quot;&gt;Green front size 12&lt;/&gt;&quot;,&#10;    &quot;Normal Text&quot;&#10;    ],&#10;    &quot;SHeaderRow&quot;: {&#10;        &quot;Columns&quot;: [&#10;            {&#10;                &quot;DefaultLabel&quot;: &quot;SListView with RichText&quot;,&#10;                &quot;FillWidth&quot;: 1&#10;            }&#10;        ]&#10;    },&#10;    &quot;RichText&quot;: true,&#10;    &quot;OnSelectionChanged&quot;: &quot;print ('Selected: {}  index: {}'.format(%item, %index))&quot;,&#10;    &quot;OnMouseButtonDoubleClick&quot;: &quot;print ('Double click: {}  index: {}'.format(%item, %index))&quot;&#10;}" description="SListView with Context Menu" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SScrollBox Example" value="&quot;SScrollBox&quot;: {&#10;    &quot;Orientation&quot;: &quot;Horizontal&quot;,&#10;    &quot;Slots&quot;:&#10;    [&#10;        {&#10;            &quot;SHorizontalBox&quot;: {&#10;                &quot;Slots&quot;: [&#10;                    {&#10;                        &quot;padding&quot;: 2,&#10;                        &quot;AutoWidth&quot;: true,&#10;                        &quot;SButton&quot;: {&#10;                            &quot;ContentPadding&quot;: [300, 4],&#10;                            &quot;Text&quot;: &quot;Long Button A&quot;&#10;                        }&#10;                    },&#10;                    {&#10;                        &quot;padding&quot;: 2,&#10;                        &quot;AutoWidth&quot;: true,&#10;                        &quot;SButton&quot;: {&#10;                            &quot;ContentPadding&quot;: [300, 4],&#10;                            &quot;Text&quot;: &quot;Long Button B&quot;&#10;                        }&#10;                    }&#10;                ]&#10;            }&#10;        }&#10;    ]&#10;}" description="SScrollBox Example with orientation: horizontal" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="Aka" value="&quot;Aka&quot;: &quot;$Aka$&quot;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="Aka" expression="" defaultValue="&quot;aUniqueWidgetName&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SUniformWrapPanel" value="&quot;SUniformWrapPanel&quot;: {&#10;    &quot;Slots&quot;:&#10;    [&#10;        {&#10;            $ContentA$&#10;        },&#10;        {&#10;            $ContentB$&#10;        }&#10;    ],&#10;    &quot;ToolTipText&quot;: &quot;UniformWrapPannel will auto wrap the children.&quot;&#10;}" description="SUniformWrapPanel" toReformat="false" toShortenFQNames="true">
+    <variable name="ContentA" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ContentB" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="ShadowColorAndOpacity" value="&quot;ShadowColorAndOpacity&quot;: [$r$, $g$, $b$, $a$]" description="ShadowColorAndOpacity Property" toReformat="false" toShortenFQNames="true">
+    <variable name="r" expression="" defaultValue="&quot;0.5&quot;" alwaysStopAt="true" />
+    <variable name="g" expression="" defaultValue="&quot;0.5&quot;" alwaysStopAt="true" />
+    <variable name="b" expression="" defaultValue="&quot;0.5&quot;" alwaysStopAt="true" />
+    <variable name="a" expression="" defaultValue="&quot;1&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="MinDesiredSlotWidth" value="&quot;MinDesiredSlotWidth&quot;: &quot;$Width$&quot;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="Width" expression="" defaultValue="&quot;100&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="MaxDesiredSlotWidth" value="&quot;MaxDesiredSlotWidth&quot;: &quot;$Width$&quot;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="Width" expression="" defaultValue="&quot;100&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="Font" value="&quot;Font&quot;:{&#10;    &quot;Style&quot;: &quot;$Style$&quot; &#10;    &quot;StyleName&quot;: &quot;$StyleName$&quot;&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="Style" expression="" defaultValue="&quot;FEditorStyle&quot;" alwaysStopAt="true" />
+    <variable name="StyleName" expression="" defaultValue="&quot;DetailsView.CategoryFontStyle&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="ImagePathInPlugin" value="&quot;ImagePathInPlugin&quot;: &quot;$rel_path$&quot;&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="rel_path" expression="" defaultValue="&quot;Resources/Icon128.png&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="Visibility" value="&quot;Visibility&quot;: &quot;$Visibility$&quot;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="Visibility" expression="enum(&quot;Visible&quot;, &quot;Collapsed&quot;, &quot;Hidden&quot;, &quot;HitTestInvisible&quot;, &quot;SelfHitTestInvisible&quot;, &quot;All&quot;)" defaultValue="&quot;Visible&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="Size" value="&quot;Size&quot;: [$VarA$, $VarB$ ]" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="VarA" expression="" defaultValue="&quot;100&quot;" alwaysStopAt="true" />
+    <variable name="VarB" expression="" defaultValue="&quot;50&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="MinDesiredWidth" value="&quot;MinDesiredWidth&quot;: &quot;$Width$&quot;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="Width" expression="" defaultValue="&quot;50&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="ImagePath" value="&quot;ImagePath&quot;: &quot;$RelPath$&quot;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="RelPath" expression="" defaultValue="&quot;image_relative_path_with_this_json_file.png&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SBorder Example" value="&quot;SBorder&quot;: {&#10;    &quot;BorderBackgroundColor&quot;: [1, 1, 1, 1],&#10;    &quot;BorderImage&quot;: {&#10;        &quot;Style&quot;: &quot;FEditorStyle&quot;,&#10;        &quot;Brush&quot;: &quot;WhiteBrush&quot;&#10;    },&#10;    &quot;ColorAndOpacity&quot;: [0, 1, 1, 1],&#10;    &quot;ToolTipText&quot;: &quot;ToolTipText&quot;,&#10;    &quot;Content&quot;:{&#10;        $VAR$&#10;    }&#10;}" description="SBorder Example with most parameters" toReformat="false" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SBox Example" value="&quot;SBox&quot;:&#10;{&#10;    &quot;HAlign&quot;: &quot;Right&quot;,&#10;    &quot;VAlign&quot;: &quot;Bottom&quot;,&#10;    &#10;    &quot;HeightOverride&quot;: 80,&#10;    &quot;WidthOverride&quot;: 80,&#10;    &#10;    &quot;MinDesiredHeight&quot;: 100,&#10;    &quot;MaxDesiredHeight&quot;: 200,&#10;    &#10;    &quot;MinDesiredWidth&quot;: 100,&#10;    &quot;MaxDesiredWidth&quot;: 200,&#10;    &#10;    &quot;Padding&quot;: [10, 20]&#10;    &quot;Content&quot;: {&#10;        $Content$&#10;    }&#10;}" description="SBox Example with most parameters" toReformat="false" toShortenFQNames="true">
+    <variable name="Content" expression="" defaultValue="&quot;SSpacer: {}&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SBreadcrumbTrail Example" value="&quot;SBreadcrumbTrail&quot;:&#10;{&#10;    &quot;Aka&quot;: &quot;$Aka$&quot;,&#10;    &quot;type&quot;: &quot;string&quot;,&#10;    &quot;ButtonContentPadding&quot;: [10, 5],&#10;    &quot;ColorAndOpacity&quot;: [1, 1, 0, 1],&#10;    &quot;ForegroundColor&quot;: [0, 1, 1, 1],&#10;    &quot;OnCrumbClick&quot;: &quot;print(%)&quot;&#10;}" description="SBreadcrumbTrail with most parameters" toReformat="false" toShortenFQNames="true">
+    <variable name="Aka" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SButton Example" value="&quot;SButton&quot;:&#10;{&#10;    &quot;ButtonColorAndOpacity&quot;: [1, 1, 0.5, 1],&#10;    &quot;ButtonStyle&quot;:{&#10;        &quot;Style&quot;: &quot;FEditorStyle&quot;,&#10;        &quot;StyleName&quot;: &quot;SimpleRoundButton&quot;&#10;    },&#10;    &quot;ColorAndOpacity&quot;: [0, 1, 1, 1],&#10;    &quot;Content&quot;: {&#10;        &quot;SImage&quot;: {&#10;            &quot;Aka&quot;: &quot;ImageInButton_A&quot;, &#10;            &quot;ImagePathInPlugin&quot;: &quot;Resources/Icon128.png&quot;,&#10;            &quot;DesiredSizeOverride&quot;: [64, 64]&#10;        }&#10;    },&#10;    &quot;ForegroundColor&quot;: [0, 1, 1, 1],&#10;    &quot;Text&quot;: &quot;$Label$&quot;,&#10;    &quot;TextStyle&quot;: {&#10;        &quot;Style&quot;: &quot;FEditorStyle&quot;,&#10;        &quot;StyleName&quot;: &quot;LargeText&quot;&#10;    },&#10;    &quot;HAlign&quot;: &quot;Center&quot;,&#10;    &quot;VAlign&quot;: &quot;Center&quot;,&#10;    &quot;ContentPadding&quot;: 4,&#10;    &quot;ToolTipText&quot;: &quot;ColorAndOpacity will apply to Content, ForegroundColor will for text.&quot;,&#10;    &quot;OnClick&quot;: &quot;print('Button $Label$ clicked.')&quot;&#10;}" description="SButton with most parameters" toReformat="false" toShortenFQNames="true">
+    <variable name="Label" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SCanvas Example" value="&quot;SCanvas&quot;: {&#10;    &quot;ToolTipText&quot;: &quot;Canvas is a layout widget that allows you to arbitrary position and size child widgets in a relative coordinate space&quot;,&#10;    &quot;Slots&quot;: [&#10;        {&#10;            &quot;Position&quot;: [97, 0],&#10;            &quot;Size&quot;: [25, 20],&#10;            &quot;SButton&quot;: {&quot;Text&quot;: &quot;^_^&quot;, &quot;ButtonColorAndOpacity&quot;: [0, 5, 0 ,1], &quot;OnClick&quot;: &quot;print('Head.')&quot;, &quot;ForegroundColor&quot;: [0,0,1,1]&#10;            }&#10;        },&#10;        {&#10;            &quot;Position&quot;: [90, 22],&#10;            &quot;Size&quot;: [40, 40],&#10;            &quot;SButton&quot;: {&quot;Text&quot;: &quot;snow\n man&quot;, &quot;ButtonColorAndOpacity&quot;: [0, 2, 0 ,1], &quot;OnClick&quot;: &quot;print('I am a snow man.')&quot;, &quot;ForegroundColor&quot;: [0,0,1,1] }&#10;        }&#10;    ]&#10;}" description="SCanvas with most parameters" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SCheckBox Example" value="&quot;SCheckBox&quot;:&#10;{&#10;    &quot;CheckBoxStyle&quot;: {&#10;        &quot;Style&quot;: &quot;FCoreStyle&quot;,&#10;        &quot;StyleName&quot;: &quot;ToggleButtonCheckbox&quot;&#10;    },&#10;    &quot;ColorAndOpacity&quot;: [1, 1, 1, 1],&#10;    &quot;Content&quot;: {&#10;        &quot;HAlign&quot;: &quot;Center&quot;,&#10;        &quot;SBox&quot;: {&#10;            &quot;VAlign&quot;: &quot;Center&quot;,&#10;            &quot;HAlign&quot;: &quot;Center&quot;,&#10;            &quot;Padding&quot; : [10, 10],&#10;            &quot;Content&quot;:&#10;            {&#10;                &quot;STextBlock&quot;:&#10;                {&#10;                    &quot;Text&quot;: &quot;Toggle Button is actually a SCheckBox&quot;&#10;                }&#10;            }&#10;        }&#10;    },&#10;    &quot;ForegroundColor&quot;: [1, 1, 0.5, 1],&#10;    &quot;HAlign&quot;: &quot;Left&quot;,&#10;    &quot;Padding&quot;: 6,&#10;    &quot;IsChecked&quot;: true,&#10;    &quot;OnCheckStateChanged&quot;: &quot;print('checked: %'.format(%))&quot;&#10;}" description="SCheckBox with most parameters" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SColorBlock Example" value="&quot;SColorBlock&quot;: &#10;{&#10;    &quot;Color&quot;:[$r$, $g$, $b$, $a$],&#10;    &quot;ColorIsHSV&quot;: false, &#10;    &quot;OnMouseButtonDown&quot;: &quot;print('mouse down')&quot;,&#10;    &quot;ShowBackgroundForAlpha&quot;: true,&#10;    &quot;Size&quot;: [200, 50],&#10;    &quot;UseSRGB&quot;: true&#10;}" description="SColorBlock with most parameters" toReformat="false" toShortenFQNames="true">
+    <variable name="g" expression="" defaultValue="&quot;0.5&quot;" alwaysStopAt="true" />
+    <variable name="r" expression="" defaultValue="&quot;0.5&quot;" alwaysStopAt="true" />
+    <variable name="b" expression="" defaultValue="&quot;0.5&quot;" alwaysStopAt="true" />
+    <variable name="a" expression="" defaultValue="&quot;1&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SComboButton Example" value="&quot;SComboButton&quot;: {&#10;    &#10;    &quot;ButtonColorAndOpacity&quot;: [1, 1, 1, 1],&#10;    &quot;ButtonContent&quot;: {&#10;        &quot;STextBlock&quot;: {&#10;            &quot;Text&quot;: &quot;Choose And Trigger the Command&quot;&#10;        }&#10;    },&#10;    &quot;ButtonStyle&quot;:{&#10;        &quot;Style&quot;: &quot;FEditorStyle1&quot;,&#10;        &quot;StyleName&quot;: &quot;FlatButton.Default&quot;&#10;    }, &#10;    &quot;ContentPadding&quot;: [5, 2],&#10;    &quot;ForegroundColor&quot;: [1, 1, 1, 1],&#10;    &quot;HAlign&quot;: &quot;Center&quot;,&#10;    &quot;HasDownArrow&quot;: true,&#10;    &quot;OnGetMenuContent&quot;: {&#10;        &quot;items&quot;: [&#10;            {&quot;name&quot;: &quot;$ITEMA$&quot;          , &quot;Command&quot;: &quot;print('$ITEMA$')&quot; },&#10;            {&quot;name&quot;: &quot;$ITEMB$&quot;          , &quot;Command&quot;: &quot;print('$ITEMB$')&quot; },&#10;            {&quot;name&quot;: &quot;$ITEMC$&quot;          , &quot;Command&quot;: &quot;print('$ITEMC$')&quot; }&#10;        ]&#10;    },&#10;    &quot;VAlign&quot;: &quot;Bottom&quot;&#10;}" description="SComboButton with most parameters" toReformat="false" toShortenFQNames="true">
+    <variable name="ITEMA" expression="" defaultValue="&quot;ItemA&quot;" alwaysStopAt="true" />
+    <variable name="ITEMB" expression="" defaultValue="&quot;ItemB&quot;" alwaysStopAt="true" />
+    <variable name="ITEMC" expression="" defaultValue="&quot;ItemC&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SDropTarget Example" value="&quot;SDropTarget&quot;: {&#10;   &quot;ColorAndOpacity&quot;: [1, 1, 1, 1],&#10;   &quot;ForegroundColor&quot;: [1, 1, 1, 1],&#10;   &quot;Text&quot;: &quot;SDropTarget&quot;,&#10;   &quot;HAlign&quot;: &quot;Center&quot;,&#10;   &quot;OnDrop&quot;: &quot;$YourTool$.on_drop_func(%**kwargs)&quot;,&#10;   &quot;Content&quot;:&#10;   {             &#10;        &quot;SMultiLineEditableTextBox&quot;: {&#10;            &quot;Margin&quot;: [0, 20],&#10;            &quot;Text&quot;: &quot;Drag And Drop Something here.&quot;&#10;        }&#10;   }&#10;}" description="SDropTarget with most parameters" toReformat="false" toShortenFQNames="true">
+    <variable name="YourTool" expression="" defaultValue="&quot;your_tool&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SExpandableArea Example" value="&quot;SExpandableArea&quot;: {&#10;    &quot;Aka&quot;: &quot;expandable_area&quot;,&#10;    &quot;AllowAnimatedTransition&quot;: true,&#10;    &quot;BorderImage&quot;: {&#10;        &quot;Style&quot;: &quot;FEditorStyle&quot;,&#10;        &quot;Brush&quot;: &quot;DetailsView.CategoryTop&quot;&#10;    },&#10;    &quot;ButtonColorAndOpacity&quot;: [1, 1, 1, 1], &#10;    &quot;Padding&quot;: 4,&#10;    &quot;HeaderPadding&quot;: [5, 3],&#10;    &quot;InitiallyCollapsed&quot;: false,&#10;    &quot;HeaderContent&quot;: {&#10;        &quot;STextBlock&quot;: {&#10;            &quot;Text&quot;: &quot;Some Header Text&quot;&#10;        }&#10;    },&#10;    &quot;MaxHeight&quot;: 100,&#10;    &quot;MinWidth&quot;: 100,&#10;    &quot;OnAreaExpansionChanged&quot;: &quot;print('OnAreaExpansionChanged text: {}'.format(%))&quot;,&#10;    &quot;BodyBorderImage&quot;: {&#10;        &quot;Style&quot;: &quot;FAppStyle&quot;,&#10;        &quot;Brush&quot;: &quot;Brushes.Recessed&quot;&#10;    },&#10;    &quot;BodyBorderBackgroundColor&quot;: [1, 1, 1, 1],&#10;    &quot;BodyContent&quot;: {&#10;        &quot;SHorizontalBox&quot;: {&#10;            &quot;Slots&quot;: [&#10;                {&#10;                    &quot;STextBlock&quot;: { &quot;Text&quot;: &quot;Some Body Text&quot; }&#10;                },&#10;                {&#10;                    &quot;SButton&quot;: { &quot;ContentPadding&quot;: 5, &quot;Text&quot;: &quot;Some Button In Body Content&quot; }&#10;                }&#10;            ]&#10;        }&#10;    }&#10;}" description="SExpandableArea with most parameters" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SHeader Example" value="&quot;SHeader&quot;:&#10;{&#10;    &quot;Content&quot;:&#10;    {&#10;        &quot;STextBlock&quot;: {&#10;            &quot;Text&quot;: &quot;Some Italic Header&quot;,&#10;            &quot;ColorAndOpacity&quot;: [1,1,0,2],&#10;            &quot;Justification&quot;: &quot;Center&quot;,&#10;            &quot;Font&quot;: {&#10;                &quot;Style&quot;: &quot;FCoreStyle&quot;,&#10;                &quot;StyleName&quot;: &quot;DefaultFont.Italic.12&quot;&#10;            },&#10;            &quot;ShadowOffset&quot;: [2,2],&#10;            &quot;ShadowColorAndOpacity&quot;: [0,0,0,1]&#10;        }&#10;    }&#10;}" description="SHeader with most parameters" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SHeaderRow Example" value="&quot;SListView&lt;MultiColumn&gt;&quot;: {&#10;    &quot;SHeaderRow&quot;: {&#10;        &quot;ColorAndOpacity&quot;: [1, 1, 0, 1],&#10;        &quot;ForegroundColor&quot;: [1, 0, 1, 1],&#10;        &quot;ToolTipText&quot;: &quot;$tips$&quot;,&#10;        &quot;Columns&quot;:&#10;        [&#10;            {&#10;                &quot;DefaultLabel&quot;: &quot;Name&quot;,&#10;                &quot;FillWidth&quot;: 0.25&#10;            },&#10;            {&#10;                &quot;DefaultLabel&quot;: &quot;A&quot;,&#10;                &quot;FillWidth&quot;: 0.25&#10;            },&#10;            {&#10;                &quot;DefaultLabel&quot;: &quot;B&quot;,&#10;                &quot;FillWidth&quot;: 0.25&#10;            }&#10;        ]&#10;    },&#10;    &quot;ListItemsSource&quot;: [ [&quot;Line 1&quot;, &quot;a&quot;, &quot;b&quot;]]&#10;}" description="SHeaderRow Example, which is a sub-widget of SListView" toReformat="false" toShortenFQNames="true">
+    <variable name="tips" expression="" defaultValue="&quot;SHeaderRow is a sub-widget of SListView, and can't be used individually.&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SHorizontalBox Example" value="&quot;SHorizontalBox&quot;: &#10;{&#10;    &quot;ToolTipText&quot;: &quot;Use 'AutoWidth' and 'SSpacer' to layout the to the right&quot;,&#10;    &quot;Slots&quot;: [&#10;        {&#10;            &quot;AutoWidth&quot;: true,&#10;            &quot;Padding&quot;: 2,&#10;            &quot;SButton&quot;:&#10;            {&#10;                &quot;Text&quot;: &quot;Widget At Left&quot;,&#10;                &quot;HAlign&quot;: &quot;Center&quot;,&#10;                &quot;VAlign&quot;: &quot;Center&quot;,&#10;                &quot;ContentPadding&quot;: 4,&#10;                &quot;ToolTipText&quot;: &quot;Test&quot;,&#10;                &quot;OnClick&quot;: &quot;print('Button Test clicked.')&quot;&#10;            }&#10;        },&#10;        {&#10;            &quot;AutoWidth&quot;: true,&#10;            &quot;SMultiLineEditableTextBox&quot;:&#10;            {&#10;                &quot;Text&quot;: &quot;Text Box follow the left button.&quot;,&#10;                &quot;AutoWrapText&quot;: true&#10;            }&#10;        },&#10;        {&#10;            &quot;SSpacer&quot;:{}&#10;        },&#10;        {&#10;            &quot;AutoWidth&quot;: true,&#10;            &quot;SButton&quot;: { &quot;ContentPadding&quot;: 4, &quot;Text&quot;: &quot;Right&quot;}&#10;        }&#10;    ]&#10;}" description="SHorizontalBox with most parameters" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SHyperlink Example" value="&quot;SHyperlink&quot;:&#10;{&#10;    &quot;ColorAndOpacity&quot;: [1, 1, 1, 1],&#10;    &quot;Padding&quot;: [20, 0],&#10;    &quot;Style&quot;:&#10;    {&#10;        &quot;Style&quot;: &quot;FEditorStyle&quot;,&#10;        &quot;StyleName&quot;: &quot;NavigationHyperlink&quot;&#10;    },&#10;    &quot;Text&quot;: &quot;www.tacolour.xyz&quot;,&#10;    &quot;OnNavigate&quot;: &quot;print('link clicked.')&quot;&#10;}" description="SHyperlink with most parameters" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SImage Examples" value="&quot;SImage&quot;: {&#10;    &quot;Aka&quot;: &quot;$Aka$&quot;,&#10;    &quot;ColorAndOpacity&quot;: [1, 1, 1, 1],&#10;    &quot;ImagePath&quot;: &quot;../ChameleonGallery/Images/cartoon_game_map.png&quot;,&#10;    &quot;ToolTipText&quot;: &quot;'ImagePath' is a relative path with the local ui json file.&quot;,&#10;    &quot;DesiredSizeOverride&quot;: [128, 128],&#10;    &quot;OnMouseButtonDown&quot;: &quot;print('clicked')&quot;&#10;}&#10;        " description="SImage Examples with most parameters in HorizontalBox" toReformat="false" toShortenFQNames="true">
+    <variable name="Aka" expression="" defaultValue="&quot;SImage_B&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SListViewMultiColumn Example" value="&quot;SListView&lt;MultiColumn&gt;&quot;: {&#10;    &quot;Aka&quot;: &quot;SListViewMultiColumn_B&quot;,&#10;    &quot;EnableAnimatedScrolling&quot;: true,&#10;    &quot;SHeaderRow&quot;: {&#10;        &quot;Columns&quot;:&#10;        [&#10;            {&#10;                &quot;DefaultLabel&quot;: &quot;Line&quot;,&#10;                &quot;FillWidth&quot;: 0.25&#10;            },&#10;            {&#10;                &quot;DefaultLabel&quot;: &quot;A&quot;,&#10;                &quot;FillWidth&quot;: 0.25&#10;            },&#10;            {&#10;                &quot;DefaultLabel&quot;: &quot;B&quot;,&#10;                &quot;FillWidth&quot;: 0.25&#10;            },&#10;            {&#10;                &quot;DefaultLabel&quot;: &quot;C&quot;,&#10;                &quot;FillWidth&quot;: 0.25&#10;            }&#10;        ]&#10;    },&#10;    &quot;ListItemsSource&quot;: [&#10;        [&quot;Line 1&quot;, &quot;&lt;RichText.red&gt;Red&lt;/&gt;&quot;, &quot;&lt;RichText.green&gt;Green&lt;/&gt;&quot;, &quot;&lt;RichText.cyan&gt;Blue&lt;/&gt;&quot;],&#10;        [&quot;Line 2&quot;, &quot;&lt;RichText.green&gt;Green&lt;/&gt;&quot;, &quot;&lt;RichText.cyan&gt;Blue&lt;/&gt;&quot;,&quot;&lt;RichText.red&gt;Red&lt;/&gt;&quot;],&#10;        [&quot;Line 3&quot;, &quot;&lt;RichText.cyan&gt;Blue&lt;/&gt;&quot;,&quot;&lt;RichText.red&gt;Red&lt;/&gt;&quot;, &quot;&lt;RichText.green&gt;Green&lt;/&gt;&quot;]&#10;    ],&#10;    &quot;OnSelectionChanged&quot;: &quot;print(%Index)&quot;,&#10;    &quot;OnMouseButtonDoubleClick&quot;: &quot;print('double click: {}'.format(%Index))&quot;,&#10;    &quot;RichText&quot;: true&#10;}" description="SListViewMultiColumn Example with rich text" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SMultiLineEditableTextBox Example" value="&quot;SMultiLineEditableTextBox&quot;: {&#10;    &quot;AutoWrapText&quot;: true,&#10;    &quot;HintText&quot;: &quot;This is a SMultiLineEditableTextBox&quot;,&#10;    &quot;Justification&quot;: &quot;Center&quot;,&#10;    &quot;LineHeightPercentage&quot;: 1.6,&#10;    &quot;Margin&quot;: [10, 20],&#10;    &quot;Marshaller&quot;: &quot;ChameleonRichText&quot;,&#10;    &quot;OnTextChanged&quot;: &quot;print(%)&quot;,&#10;    &quot;OnTextCommitted&quot;: &quot;print('input text: {}'.format(%))&quot;,&#10;    &quot;SelectAllTextWhenFocused&quot;: true,&#10;    &quot;Text&quot;: &quot;&lt;TextStyle FontFamily=\&quot;Roboto\&quot; FontSize=\&quot;15\&quot; FontStyle=\&quot;Regular\&quot; FontColor=\&quot;(R=1,G=0.5,B=0,A=1)\&quot;&gt;SMultiLineEditableTextBox&lt;/&gt;\n&lt;TextStyle FontFamily=\&quot;Roboto\&quot; FontSize=\&quot;10\&quot; FontStyle=\&quot;Regular\&quot; FontColor=\&quot;(R=0.8,G=0.02,B=0,A=1)\&quot;&gt;SMultiLineEditableTextBox line1&lt;/&gt;\nSMultiLineEditableTextBox line2&quot;,&#10;    &quot;ToolTipText&quot;: &quot;Tool Tips&quot;&#10;}" description="SMultiLineEditableTextBox with rich text" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SMultiLineEditableText Example" value="&quot;SMultiLineEditableText&quot;: {&#10;    &quot;AutoWrapText&quot;: true,&#10;    &quot;HintText&quot;: &quot;This is a SMultiLineEditableText&quot;,&#10;    &quot;Justification&quot;: &quot;Center&quot;,&#10;    &quot;LineHeightPercentage&quot;: 1.6,&#10;    &quot;Margin&quot;: [10, 20],&#10;    &quot;Marshaller&quot;: &quot;ChameleonRichText&quot;,&#10;    &quot;OnTextChanged&quot;: &quot;print(%)&quot;,&#10;    &quot;OnTextCommitted&quot;: &quot;print('input text: {}'.format(%))&quot;,&#10;    &quot;SelectAllTextWhenFocused&quot;: true,&#10;    &quot;Text&quot;: &quot;&lt;TextStyle FontFamily=\&quot;Roboto\&quot; FontSize=\&quot;15\&quot; FontStyle=\&quot;Regular\&quot; FontColor=\&quot;(R=0,G=0.5,B=1,A=1)\&quot;&gt;SMultiLineEditableText&lt;/&gt;\n&lt;TextStyle FontFamily=\&quot;Roboto\&quot; FontSize=\&quot;10\&quot; FontStyle=\&quot;Regular\&quot; FontColor=\&quot;(R=0.8,G=0.02,B=0,A=1)\&quot;&gt;is similar with &lt;/&gt;\nSMultiLineEditableTextBox\n which is not a 'Box'&quot;,&#10;    &quot;ToolTipText&quot;: &quot;Tool Tips&quot;&#10;}" description="SMultiLineEditableText Example with rich text" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SOverlay Example" value="&quot;SOverlay&quot;: {&#10;    &quot;Slots&quot;:&#10;    [&#10;        {&#10;            &quot;SImage&quot;: {&#10;                    &quot;Aka&quot;: &quot;ImageBackgroundInSOverlay&quot;,&#10;                    &quot;ImagePathInPlugin&quot;: &quot;Resources/PythonIcon_128x.png&quot;&#10;            }&#10;        },&#10;        {&#10;            &quot;SUniformGridPanel&quot;: {&#10;                &quot;Slots&quot;: [&#10;                    {&#10;                        &quot;Column_Row&quot;: [0, 0],&#10;                        &quot;SButton&quot;: { &quot;Text&quot;: &quot;Tile 0_0&quot;, &quot;ButtonColorAndOpacity&quot;: [1, 1, 1, 0.5] }&#10;                    },&#10;                    {&#10;                        &quot;Column_Row&quot;: [1, 0],&#10;                        &quot;SButton&quot;: { &quot;Text&quot;: &quot;Tile 1_0&quot;, &quot;ButtonColorAndOpacity&quot;: [1, 1, 1, 0.5] }&#10;                    },&#10;                    {&#10;                        &quot;Column_Row&quot;: [2, 0],&#10;                        &quot;SButton&quot;: { &quot;Text&quot;: &quot;Tile 2_0&quot;, &quot;ButtonColorAndOpacity&quot;: [1, 1, 1, 0.5] }&#10;                    },&#10;                    {&#10;                        &quot;Column_Row&quot;: [0, 1],&#10;                        &quot;SButton&quot;: { &quot;Text&quot;: &quot;Tile 0_1&quot;, &quot;ButtonColorAndOpacity&quot;: [1, 1, 1, 0.5] }&#10;                    },&#10;                    {&#10;                        &quot;Column_Row&quot;: [1, 1],&#10;                        &quot;SButton&quot;: { &quot;Text&quot;: &quot;Tile 1_1&quot;, &quot;ButtonColorAndOpacity&quot;: [1, 1, 1, 0.5]}&#10;                    },&#10;                    {&#10;                        &quot;Column_Row&quot;: [2, 1],&#10;                        &quot;SButton&quot;: { &quot;Text&quot;: &quot;Tile 2_1&quot;, &quot;ButtonColorAndOpacity&quot;: [1, 1, 1, 0.5]}&#10;                    }&#10;                ]&#10;            }&#10;        }&#10;    ]&#10;}" description="SOverlay with" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SProgressBar Example" value="&quot;SProgressBar&quot;:&#10;{&#10;    &quot;Aka&quot;: &quot;$Aka$&quot;,&#10;    &quot;FillType&quot;: &quot;FillFromCenter&quot;,&#10;    &quot;Percent&quot;: &quot;0.5&quot;,&#10;    &quot;ToolTipText&quot;: &quot;Tool Tip&quot;,&#10;    &quot;Visibility&quot;: &quot;HitTestInvisible&quot;&#10;}" description="SProgressBar with most parameters" toReformat="false" toShortenFQNames="true">
+    <variable name="Aka" expression="" defaultValue="&quot;ProgressBar_A&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SSearchBox Example" value="&quot;SSearchBox&quot;: &#10;{&#10;    &quot;ColorAndOpacity&quot;: [1, 1, 1, 1],&#10;    &quot;HintText&quot;: &quot;Type Search Text&quot;,&#10;    &quot;ToolTipText&quot;: &quot;Tool Tip&quot;,&#10;    &quot;OnTextChanged&quot;: &quot;print(%)&quot;,&#10;    &quot;OnTextCommitted&quot;: &quot;print(%)&quot;,&#10;    &quot;SelectAllTextWhenFocused&quot;: false,&#10;    &quot;DelayChangeNotificationWhiteTyping&quot;: true&#10;}" description="SSearchBox Example" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SSeparator Example" value="&quot;SSeparator&quot;:&#10;{&#10;    &quot;Thickness&quot;:5,&#10;    &quot;Orientation&quot;: &quot;Horizontal&quot;&#10;}" description="SSeparator Example" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SSpinBox Example" value="&quot;SSpinBox&quot;: &#10;{&#10;    &quot;Type&quot;: &quot;float&quot;,&#10;    &quot;Value&quot;: 10.0,&#10;    &quot;MinValue&quot;: 0,&#10;    &quot;MaxValue&quot;: 100,&#10;    &quot;MinSliderValue&quot;: 0,&#10;    &quot;maxSliderValue&quot;: 100,&#10;    &quot;Delta&quot;: 0.05,&#10;    &quot;OnValueChanged&quot;: &quot;print(%)&quot;&#10;}" description="SSpinBox Example with float type" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SSplitter Example" value="&quot;SSplitter&quot;: {&#10;    &quot;MinSizeValue&quot;: 50,&#10;    &quot;Orientation&quot;: &quot;Horizontal&quot;,&#10;    &quot;PhysicalSplitterHandleSize&quot;: 4,&#10;    &quot;ResizeMode&quot;: &quot;FixedPosition&quot;,&#10;    &quot;Slots&quot;: [&#10;        {&#10;            &quot;Value&quot;: 0.4,&#10;            &quot;SButton&quot;: {&#10;                &quot;ContentPadding&quot;: 10,&#10;                &quot;Text&quot;: &quot;ButtonA&quot;&#10;            }&#10;        },&#10;        {&#10;            &quot;Value&quot;: 0.6,&#10;            &quot;SButton&quot;: {&#10;                &quot;ContentPadding&quot;: 10,&#10;                &quot;Text&quot;: &quot;ButtonB&quot;&#10;            }&#10;        }&#10;&#10;    ]&#10;}" description="SSplitter with most parameter" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="STreeView Example" value="&quot;STreeView&quot;:&#10;{&#10;    &quot;Aka&quot;: &quot;TreeViewA&quot;,&#10;    &quot;SHeaderRow&quot;: {&#10;        &quot;Columns&quot;: [&#10;            {&#10;                &quot;DefaultLabel&quot;: &quot;Tree View List&quot;,&#10;                &quot;FillWidth&quot;: 1&#10;            }&#10;        ]&#10;    },&#10;    &quot;TreeItemSource&quot;: [&quot;ItemA&quot;, &quot;ItemB&quot;, &quot;ItemC&quot;, &quot;ItemD&quot;, &quot;ItemE&quot;, &quot;ItemF&quot; ],&#10;    &quot;TreeItemParentIndices&quot;: [-1, 0, 0, 2, 1, 1],&#10;    &quot;OnMouseButtonDoubleClick&quot;: &quot;print('Doublel click: %Index, %Item')&quot;,&#10;    &quot;OnSelectionChanged&quot;: &quot;print('Selection Change: %Index, %Item')&quot;,&#10;    &quot;OnContextMenuOpening&quot;:&#10;    {&#10;        &quot;items&quot;:&#10;        [&#10;            {&#10;                &quot;name&quot;: &quot;ContextMenu A&quot;,&#10;                &quot;Command&quot;: &quot;print ('ContextMenu A')&quot;&#10;            },&#10;            {&#10;                &quot;name&quot;: &quot;ContextMenu B&quot;,&#10;                &quot;Command&quot;: &quot;print ('ContextMenu B')&quot;&#10;            }&#10;        ]&#10;    }&#10;}" description="STreeView Example with most parameters" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SUniformGridPanel Example" value="&quot;SUniformGridPanel&quot;: {&#10;    &quot;MinDesiredSlotHeight&quot;: 50,&#10;    &quot;MinDesiredSlotWidth&quot;: 50,&#10;    &quot;SlotPadding&quot;: 5,&#10;    &quot;Slots&quot;: [&#10;        {&#10;            &quot;Column_Row&quot;: [0, 0],&#10;            &quot;SButton&quot;: { &quot;Text&quot;: &quot;Placeholder A&quot;, &quot;ContentPadding&quot;: 10 }&#10;        },&#10;        {&#10;            &quot;Column_Row&quot;: [1, 0],&#10;            &quot;SButton&quot;: { &quot;Text&quot;: &quot;Placeholder B&quot;, &quot;ContentPadding&quot;: 10 }&#10;        },&#10;        {&#10;            &quot;Column_Row&quot;: [2, 0],&#10;            &quot;SButton&quot;: { &quot;Text&quot;: &quot;Placeholder C&quot;, &quot;ContentPadding&quot;: 10 }&#10;        },&#10;        {&#10;            &quot;Column_Row&quot;: [0, 1],&#10;            &quot;SButton&quot;: { &quot;Text&quot;: &quot;Placeholder D&quot;, &quot;ContentPadding&quot;: 10 }&#10;        },&#10;        {&#10;            &quot;Column_Row&quot;: [1, 1],&#10;            &quot;SButton&quot;: { &quot;Text&quot;: &quot;Placeholder E&quot;, &quot;ContentPadding&quot;: 10 }&#10;        },&#10;        {&#10;            &quot;Column_Row&quot;: [2, 1],&#10;            &quot;SButton&quot;: { &quot;Text&quot;: &quot;Placeholder F&quot;, &quot;ContentPadding&quot;: 10 }&#10;        }&#10;    ]&#10;}" description="SUniformGridPanel Example with most parameters" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SVerticalBox Example" value="&quot;SVerticalBox&quot;:&#10;{&#10;    &quot;ToolTipText&quot;: &quot;Use 'AutoHeight' and 'SSpacer' to layout status bar at bottom&quot;,&#10;    &quot;Slots&quot;: [&#10;        {&#10;            &quot;AutoHeight&quot;: true,&#10;            &quot;STextBlock&quot;:&#10;            {&#10;                &quot;Text&quot;: &quot;Text Content&quot;&#10;            }&#10;        },&#10;        {&#10;            &quot;AutoHeight&quot;: true,&#10;            &quot;Padding&quot;: 2,&#10;            &quot;SButton&quot;:&#10;            {&#10;                &quot;Text&quot;: &quot;Some Button&quot;,&#10;                &quot;HAlign&quot;: &quot;Center&quot;,&#10;                &quot;VAlign&quot;: &quot;Center&quot;,&#10;                &quot;ContentPadding&quot;: 4,&#10;                &quot;ToolTipText&quot;: &quot;Test&quot;,&#10;                &quot;OnClick&quot;: &quot;print('Button Test clicked.')&quot;&#10;            }&#10;        },&#10;        {&#10;            &quot;SSpacer&quot;:{}&#10;        },&#10;        {&#10;            &quot;AutoHeight&quot;: true,&#10;            &quot;STextBlock&quot;:&#10;            {&#10;                &quot;Text&quot;: &quot;Status Bar&quot;,&#10;                &quot;ColorAndOpacity&quot;: [0, 0.5, 1, 1],&#10;                &quot;Font&quot;: {&#10;                    &quot;Style&quot;: &quot;FEditorStyle&quot;,&#10;                    &quot;StyleName&quot;: &quot;FontAwesome.9&quot;&#10;                },&#10;                &quot;ShadowOffset&quot;: [2, 2],&#10;                &quot;ShadowColorAndOpacity&quot;: [0, 0, 0, 0.75],&#10;                &quot;Justification&quot;: &quot;Left&quot;&#10;            }&#10;        }&#10;    ]&#10;}" description="SVerticalBoxExample with most parameters" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SEditableTextBox Example" value="&quot;SEditableTextBox&quot;:&#10;{&#10;    &quot;AutoWrapText&quot;: true,&#10;    &quot;ColorAndOpacity&quot;: [1, 1, 1, 1],&#10;    &quot;Font&quot;: {&#10;        &quot;Style&quot;: &quot;FCoreStyle&quot;,&#10;        &quot;StyleName&quot;: &quot;DefaultFont.Bold.11&quot;,&#10;    },&#10;    &quot;HintText&quot;: &quot;Readonly Text Can't Be Edit.&quot;,&#10;    &quot;IsReadOnly&quot;: true,&#10;    &quot;Justification&quot;: &quot;Left&quot;,&#10;    &quot;MinDesiredWidth&quot;: 100,&#10;    &quot;Text&quot;: &quot;Some readonly text.&quot;,&#10;    &quot;OnTextChanged&quot;: &quot;print(%)&quot;,&#10;    &quot;SelectAllTextWhenFocused&quot;: true,&#10;    &quot;OnTextCommitted&quot;: &quot;print('input text: {}'.format(%))&quot;&#10;}" description="SEditableTextBox Example with most parameters" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SEditableTextBox" value="&quot;SEditableTextBox&quot;:&#10;{&#10;    &quot;Text&quot;: &quot;Some Text&quot;&#10;}" description="SEditableTextBox" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SEditableText" value="&quot;SEditableText&quot;:&#10;{&#10;    &quot;Text&quot;: &quot;Some Text&quot;&#10;}" description="SEditableTextBox" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SEditableText Example" value="&quot;SEditableText&quot;:&#10;{&#10;    &quot;ColorAndOpacity&quot;: [1, 1, 1, 1],&#10;    &quot;Font&quot;: {&#10;        &quot;Style&quot;: &quot;FCoreStyle&quot;,&#10;        &quot;StyleName&quot;: &quot;DefaultFont.Bold.11&quot;,&#10;    }&#10;    &quot;HintText&quot;: &quot;Readonly Text Can't Be Edit.&quot;,&#10;    &quot;IsReadOnly&quot;: true,&#10;    &quot;Justification&quot;: &quot;Left&quot;,&#10;    &quot;MinDesiredWidth&quot;: 100,&#10;    &quot;Text&quot;: &quot;Some readonly text.&quot;,&#10;    &quot;OnTextChanged&quot;: &quot;print(%)&quot;,&#10;    &quot;SelectAllTextWhenFocused&quot;: true,&#10;    &quot;OnTextCommitted&quot;: &quot;print('input text: {}'.format(%))&quot;&#10;}" description="SEditableText Example with most parameters" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+</templateSet>
