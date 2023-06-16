@@ -1,0 +1,632 @@
+{
+    "SExpandableArea": {
+        "prefix": "SExpandableArea",
+        "body": [
+            "\"SExpandableArea\": {\n    \"HeaderContent\": {\n        $1\n    },\n    \"BodyContent\": {\n        $2\n    }\n}"
+        ]
+    },
+    "SBorder": {
+        "prefix": "SBorder",
+        "body": [
+            "\"SBorder\": {\n    \"BorderImage\": {\n        \"Style\": \"FEditorStyle\",\n        \"Brush\": \"ToolPanel.DarkGroupBorder\"\n    },\n    \"Content\":{\n        $1\n    }\n}"
+        ]
+    },
+    "Chameleon": {
+        "prefix": "Chameleon",
+        "body": [
+            "{\n\t\"TabLabel\": \"A Chameleon Tool\",\n\t\"InitTabSize\": [400, 250],\n\t\"InitTabPosition\": [200, 100],\n    \"InitPyCmd\": \"import $1; $2 = $3.$4.$5(%JsonPath)\",\n    \"Root\": {\n        $6\n    }\n}"
+        ]
+    },
+    "SBox": {
+        "prefix": "SBox",
+        "body": [
+            "\"SBox\":\n{\n    \"MinDesiredWidth\": 200,\n    \"MinDesiredHeight\": 80,\n    \"Content\": {\n        $1\n    }\n}"
+        ]
+    },
+    "SBreadcrumbTrail": {
+        "prefix": "SBreadcrumbTrail",
+        "body": [
+            "\"SBreadcrumbTrail\":\n{\n    \"Aka\": \"$1\",\n    \"type\": \"string\",\n    \"ButtonContentPadding\": 1,\n    \"OnCrumbClick\": \"print(%)\"\n}"
+        ]
+    },
+    "SButtonB": {
+        "prefix": "SButtonB",
+        "body": [
+            "\"SButton\":\n{\n    \"Text\": \"$1\",\n    \"HAlign\": \"Center\",\n    \"VAlign\": \"Center\",\n    \"ContentPadding\": 4,\n    \"ToolTipText\": \"$2\",\n    \"OnClick\": \"print('Button $3 clicked.')\"\n}"
+        ]
+    },
+    "SCanvas": {
+        "prefix": "SCanvas",
+        "body": [
+            "\"SCanvas\": {\n    \"Slots\": [\n        {\n            \"Position\": [95, 0],\n            \"Size\": [80, 20],\n            $1\n        },\n        {\n            $2\n        }\n    ]\n}"
+        ]
+    },
+    "SCheckBox": {
+        "prefix": "SCheckBox",
+        "body": [
+            "\"SCheckBox\":\n{\n    \"Content\": {\n        $1        \n    },\n    \"Padding\": 6,\n    \"IsChecked\": true,\n    \"OnCheckStateChanged\": \"print('checked: %'.format(%))\"\n}"
+        ]
+    },
+    "SColorBlock": {
+        "prefix": "SColorBlock",
+        "body": [
+            "\"SColorBlock\": \n{\n    \"Color\":[$1, $2, $3, $4],\n    \"ColorIsHSV\": false\n}"
+        ]
+    },
+    "SComboBox": {
+        "prefix": "SComboBox",
+        "body": [
+            "\"SComboBox\": {\n    \"Aka\": \"$1\",\n    \"Content\": {\n        \"Text\": \"ComboBox\"\n    },\n    \"OptionsSource\": [\n        \"$2\",\n        \"$3\",\n        \"$4\"\n    ],\n    \"OnSelectionChanged\": \"print(%)\"\n}"
+        ]
+    },
+    "SComboButton": {
+        "prefix": "SComboButton",
+        "body": [
+            "\"SComboButton\": {\n    \"HAlign\": \"Center\",\n    \"ButtonContent\": {\n        \"STextBlock\": {\n            \"Text\": \"Choose And Trigger the Command\"\n        }\n    },\n    \"HasDownArrow\": true,\n    \"OnGetMenuContent\": {\n        \"items\": [\n            {\"name\": \"$1\"          , \"Command\": \"print('$2')\" },\n            {\"name\": \"$3\"          , \"Command\": \"print('$4')\" },\n            {\"name\": \"$5\"          , \"Command\": \"print('$6')\" }\n        ]\n    }\n}"
+        ]
+    },
+    "SDropTarget": {
+        "prefix": "SDropTarget",
+        "body": [
+            "\"SDropTarget\": {\n   \"Text\": \"SDropTarget\",\n   \"HAlign\": \"Center\",\n   \"OnDrop\": \"$1.on_drop_func(%**kwargs)\",\n   \"Content\":\n   {\n        $2\n   }\n}"
+        ]
+    },
+    "SGridPanel": {
+        "prefix": "SGridPanel",
+        "body": [
+            "\"SGridPanel\":\n{\n   \"FillColumn\": [[0, 0.38], [1, 0.62]],\n   \"Slots\":\n   [\n       {\n           \"Column_Row\": [$1, $2],\n           $3\n       }\n    ]\n}"
+        ]
+    },
+    "SHeader": {
+        "prefix": "SHeader",
+        "body": [
+            "\"SHeader\":\n{\n    \"Content\":\n    {\n        $1\n    }\n}"
+        ]
+    },
+    "SHeaderRow": {
+        "prefix": "SHeaderRow",
+        "body": [
+            "\"SHeaderRow\": {\n    \"Columns\": [\n        {\n            \"DefaultLabel\": $1,\n            \"FillWidth\": 1\n        }\n    ]\n}"
+        ]
+    },
+    "SHorizontalBox": {
+        "prefix": "SHorizontalBox",
+        "body": [
+            "\"SHorizontalBox\": \n{\n    \"Slots\": [\n        {\n            $1\n        },\n        {\n            $2\n        }\n    ]\n}"
+        ]
+    },
+    "SHyperlink": {
+        "prefix": "SHyperlink",
+        "body": [
+            "\"SHyperlink\": \n{   \n    \"Style\":\n    {   \n        \"Style\": \"FEditorStyle\",\n        \"StyleName\": \"Credits.Hyperlink\"\n    }, \n    \"Text\": \"$1\"\n}"
+        ]
+    },
+    "SImage": {
+        "prefix": "SImage",
+        "body": [
+            "\"SImage\": {\n    \"Aka\": \"$1\",  \n    \"ImagePathInPlugin\": \"$2\"\n}"
+        ]
+    },
+    "SListView": {
+        "prefix": "SListView",
+        "body": [
+            "\"SListView\": {\n    \"Aka\": \"$1\",\n    \"ListItemsSource\": [\"$2\", \"$3\", \"$4\"],\n    \"SHeaderRow\": {\n        \"Columns\": [\n            {\n                \"DefaultLabel\": \"$5\",\n                \"FillWidth\": 1\n            }\n        ]\n    },\n    \"OnSelectedChanged\": \"print ('Selected: {}  index: {}'.format(%item, %index))\",\n    \"OnMouseButtonDoubleClick\": \"print ('Double click: {}  index: {}'.format(%item, %index))\"\n}"
+        ]
+    },
+    "SListViewMultiColumn": {
+        "prefix": "SListViewMultiColumn",
+        "body": [
+            "\"SListView<MultiColumn>\": {\n    \"ItemHeight\": 6,\n    \"Aka\": \"ListViewLeft\",\n    \"RichText\": true,\n    \"EnableAnimatedScrolling\": false,\n    \"SHeaderRow\": {\n        \"Columns\": [\n            {\n                \"DefaultLabel\": \"Property\",\n                \"FillWidth\": 0.4\n            },\n            {\n                \"DefaultLabel\": \"Value\",\n                \"FillWidth\": 0.6\n            }\n        ]\n    },\n    \"ListItemsSource\": [\n        [\"$1\", \"$2\"]\n        , [\"$3\", \"$4\"]\n    ],\n    \"OnMouseButtonDoubleClick\": \"objectDetailViewer.on_listview_DetailListLeft_mouse_button_double_click(%Index)\",\n    \"OnSelectionChanged\": \"objectDetailViewer.ui_on_listview_DetailList_selection_changed(bRight=False)\"\n}"
+        ]
+    },
+    "SMultiLineEditableTextBox": {
+        "prefix": "SMultiLineEditableTextBox",
+        "body": [
+            "\"SMultiLineEditableTextBox\": \n{\n    \"Text\": \"Muti-line Box\\nLine 1\\nLine 2\\nLine 3\",\n    \"HintText\": \"This is a SMultiLineEditableTextBox\",\n    \"AutoWrapText\": true\n}"
+        ]
+    },
+    "SMultiLineEditableText": {
+        "prefix": "SMultiLineEditableText",
+        "body": [
+            "\"SMultiLineEditableText\":\n{\n    \"Text\": \"line 1 \\nline 2 \\nline 3\",\n    \"HintText\": \"SelectAllTextWhenFocused\",\n    \"Font\": {\n        \"Style\": \"FEditorStyle\",\n        \"StyleName\": \"FontAwesome.16\"\n    },\n    \"Margin\": 10,\n    \"SelectAllTextWhenFocused\": true,\n    \"OnTextChanged\": \"print(%)\",\n    \"OnTextCommitted\": \"print('input text: {}'.format(%))\"\n}"
+        ]
+    },
+    "SOverlay": {
+        "prefix": "SOverlay",
+        "body": [
+            "\"SOverlay\": {\n    \"Slots\":\n    [\n        {\n            \"SImage\": {\n                \"Aka\": \"AImage\",\n                \"ImagePathInPlugin\": \"Resources/PythonIcon_128x.png\"\n            }\n        },\n        {\n            \"Padding\": 10,\n            $1\n        }\n    ]\n}"
+        ]
+    },
+    "SProgressBar": {
+        "prefix": "SProgressBar",
+        "body": [
+            "\"SProgressBar\":\n{\n    \"Aka\": \"$1\",\n    \"FillType\": \"LeftToRight\",\n    \"Percent\": \"0.5\"\n}"
+        ]
+    },
+    "SRichTextBlock": {
+        "prefix": "SRichTextBlock",
+        "body": [
+            "\"SRichTextBlock\":\n{\n    \"Text\": \"$1\"\n}"
+        ]
+    },
+    "SRichTextBlock ExampleA": {
+        "prefix": "SRichTextBlock ExampleA",
+        "body": [
+            "\"SRichTextBlock\": {\n    \"Text\": \"<RichText.red>Red</> <RichText.green>Green</> <RichText.cyan>Rich text Wrapped by</><TextStyle FontFamily=\\\"Roboto\\\" FontSize=\\\"13\\\" FontStyle=\\\"Italic\\\" FontColor=\\\"(R=1, G=1,B=0,A=1)\\\">  'WrapTextAt'</>\\n Torquent nostra lacus pulvinar leo. Facilisi etiam pede dapibus, id nec condimentum mollis gravida Mi fringilla nibh. Ipsum vestibulum, congue venenatis, sem netus. Ipsum duis, class semper Arcu phasellus nulla arcu. Curabitur, quisque. Leo odio ultricies penatibus.\",\n    \"AutoWrapText\": true,\n    \"Justification\": \"Left\",\n    \"LineHeightPercentage\": 1.5,\n    \"Margin\": 30,\n    \"MinDesiredWidth\": 150,\n    \"WrapTextAt\": 200,\n    \"WrappingPolicy\": \"AllowPerCharacterWrapping\",\n    \"Marshaller\": \"ChameleonRichText\"\n}"
+        ]
+    },
+    "SRichTextBlock ExampleB": {
+        "prefix": "SRichTextBlock ExampleB",
+        "body": [
+            "\"SRichTextBlock\": {\n    \"Text\": \"<TextStyle FontFamily=\\\"Roboto\\\" FontSize=\\\"11\\\" FontStyle=\\\"Bold\\\" FontColor=\\\"(R=0,G=1,B=0,A=0.5)\\\">This is a hyperlink: </><a id=\\\"browser\\\" href=\\\"https:\\/\\/www.unrealengine.com/\\\" style=\\\"RichText.Editor.Hyperlink\\\">Unreal Engine</>\",\n    \"Marshaller\": \"ChameleonRichText\"\n}"
+        ]
+    },
+    "SScrollBox": {
+        "prefix": "SScrollBox",
+        "body": [
+            "\"SScrollBox\": {\n    \"Orientation\": \"Vertical\",\n    \"Slots\":\n    [\n        {\n            $1     \n        }\n    ]\n}"
+        ]
+    },
+    "SSearchBox": {
+        "prefix": "SSearchBox",
+        "body": [
+            "\"SSearchBox\": \n{\n    \"HintText\": \"Type Search Text\",\n    \"ToolTipText\": \"Tool Tip\",\n    \"OnTextChanged\": \"$1(%)\",\n    \"OnTextCommitted\": \"$2(%)\",\n    \"SelectAllTextWhenFocused\": false,\n    \"DelayChangeNotificationWhiteTyping\": true\n}"
+        ]
+    },
+    "SSeparator": {
+        "prefix": "SSeparator",
+        "body": [
+            "\"SSeparator\":\n{\n    \"Thickness\":5,\n    \"Orientation\": \"Horizontal\"\n}"
+        ]
+    },
+    "SSlider": {
+        "prefix": "SSlider",
+        "body": [
+            "\"SSlider\":\n{\n    \"Orientation\": \"$1\",\n    \"Value\": 0.5,\n    \"Locked\": false,\n    \"OnValueChanged\": \"print(%)\"\n}"
+        ]
+    },
+    "SSpacer": {
+        "prefix": "SSpacer",
+        "body": [
+            "\"SSpacer\":\n{\n    \"Size\": [100, 50]\n}"
+        ]
+    },
+    "SSpinBox": {
+        "prefix": "SSpinBox",
+        "body": [
+            "\"SSpinBox\": \n{\n    \"Type\": \"int\",\n    \"Value\": 10,\n    \"MinValue\": 1,\n    \"MaxValue\": 8192,\n    \"MinSliderValue\": 1,\n    \"maxSliderValue\": 8192,\n    \"Delta\": 1,\n    \"OnValueChanged\": \"print(%)\"\n}"
+        ]
+    },
+    "SSplitter": {
+        "prefix": "SSplitter",
+        "body": [
+            "\"SSplitter\": {\n    \"Orientation\": \"Horizontal\",\n    \"PhysicalSplitterHandleSize\": 4,\n    \"ResizeMode\": \"FixedPosition\",\n    \"Slots\": [\n        {\n            \"Value\": 0.4,\n            $1\n        },\n        {\n            \"Value\": 0.6,\n            $2\n        }\n\n    ]\n}"
+        ]
+    },
+    "STextBlock": {
+        "prefix": "STextBlock",
+        "body": [
+            "\"STextBlock\":\n{\n    \"Text\": \"$1\"\n}"
+        ]
+    },
+    "STextBlock Example": {
+        "prefix": "STextBlock Example",
+        "body": [
+            "\"STextBlock\":\n{\n    \"Text\": \"Text Content\",\n    \"ColorAndOpacity\": [0, 0.5, 1, 1],\n    \"Font\": {\n        \"Style\": \"FEditorStyle\",\n        \"StyleName\": \"FontAwesome.16\"\n    },\n    \"ShadowOffset\": [2, 2],\n    \"ShadowColorAndOpacity\": [0, 0, 0, 0.75],\n    \"Justification\": \"Left\"\n}"
+        ]
+    },
+    "SThrobber": {
+        "prefix": "SThrobber",
+        "body": [
+            "\"SThrobber\":\n{\n    \"NumPieces\": 3,\n    \"Animate\": \"$1\"\n} "
+        ]
+    },
+    "STreeView": {
+        "prefix": "STreeView",
+        "body": [
+            "\"STreeView\":\n{\n    \"Aka\": \"$1\",\n    \"SHeaderRow\": {\n        \"Columns\": [\n            {\n                \"DefaultLabel\": \"Tree View List\",\n                \"FillWidth\": 1\n            }\n        ]\n    },\n    \"TreeItemSource\": [\"ItemA\", \"ItemB\", \"ItemC\", \"ItemD\", \"ItemE\", \"ItemF\" ],\n    \"TreeItemParentIndices\": [-1, 0, 0, 2, 1, 1]\n}"
+        ]
+    },
+    "SUniformGridPanel": {
+        "prefix": "SUniformGridPanel",
+        "body": [
+            "\"SUniformGridPanel\": {\n    \"Slots\": [\n        {\n            \"Column_Row\": [0, 0],\n            $1\n        },\n        {\n            \"Column_Row\": [1, 0],\n            $2\n        },\n        {\n            \"Column_Row\": [2, 0],\n            $3\n        },\n        {\n            \"Column_Row\": [0, 1],\n            $4\n        },\n        {\n            \"Column_Row\": [1, 1],\n            $5\n        },\n        {\n            \"Column_Row\": [2, 1],\n            $6\n        }\n    ]\n}"
+        ]
+    },
+    "SUniformWrapPanel Example": {
+        "prefix": "SUniformWrapPanel Example",
+        "body": [
+            "\"SUniformWrapPanel\": {\n    \"Slots\":\n    [\n        {\"SImage\": { \"DesiredSizeOverride\": [32, 32], \"Image\":{ \"Style\": \"FEditorStyle\", \"Brush\": \"Perforce.CheckedOut\"}}}\n        ,{\"SImage\": { \"DesiredSizeOverride\": [32, 32], \"Image\":{ \"Style\": \"FEditorStyle\", \"Brush\": \"Perforce.OpenForAdd\"}}}\n        ,{\"SImage\": { \"DesiredSizeOverride\": [32, 32], \"Image\":{ \"Style\": \"FEditorStyle\", \"Brush\": \"Perforce.CheckedOutByOtherUser\"}}}\n        ,{\"SImage\": { \"DesiredSizeOverride\": [32, 32], \"Image\":{ \"Style\": \"FEditorStyle\", \"Brush\": \"Perforce.CheckedOutByOtherUserOtherBranch\"}}}\n        ,{\"SImage\": { \"DesiredSizeOverride\": [32, 32], \"Image\":{ \"Style\": \"FEditorStyle\", \"Brush\": \"Perforce.ModifiedOtherBranch\"}}}\n        ,{\"SImage\": { \"DesiredSizeOverride\": [32, 32], \"Image\":{ \"Style\": \"FEditorStyle\", \"Brush\": \"Perforce.NotAtHeadRevision\"}}}\n        ,{\"SImage\": { \"DesiredSizeOverride\": [32, 32], \"Image\":{ \"Style\": \"FEditorStyle\", \"Brush\": \"Perforce.CheckedOut\"}}}\n        ,{\"SImage\": { \"DesiredSizeOverride\": [32, 32], \"Image\":{ \"Style\": \"FEditorStyle\", \"Brush\": \"Perforce.OpenForAdd\"}}}\n        ,{\"SImage\": { \"DesiredSizeOverride\": [32, 32], \"Image\":{ \"Style\": \"FEditorStyle\", \"Brush\": \"Perforce.CheckedOutByOtherUser\"}}}\n        ,{\"SImage\": { \"DesiredSizeOverride\": [32, 32], \"Image\":{ \"Style\": \"FEditorStyle\", \"Brush\": \"Perforce.CheckedOutByOtherUserOtherBranch\"}}}\n        ,{\"SImage\": { \"DesiredSizeOverride\": [32, 32], \"Image\":{ \"Style\": \"FEditorStyle\", \"Brush\": \"Perforce.ModifiedOtherBranch\"}}}\n        ,{\"SImage\": { \"DesiredSizeOverride\": [32, 32], \"Image\":{ \"Style\": \"FEditorStyle\", \"Brush\": \"Perforce.NotAtHeadRevision\"}}}\n    ],\n    \"ToolTipText\": \"UniformWrapPannel will auto wrap the children.\"\n}"
+        ]
+    },
+    "SVerticalBox": {
+        "prefix": "SVerticalBox",
+        "body": [
+            "\"SVerticalBox\":\n{\n    \"Slots\": [\n        {\n            $1\n        },\n        {\n            $2\n        }\n    ]\n}"
+        ]
+    },
+    "Orientation": {
+        "prefix": "Orientation",
+        "body": [
+            "\"Orientation\": \"$1\""
+        ]
+    },
+    "AutoHeight": {
+        "prefix": "AutoHeight",
+        "body": [
+            "\"AutoHeight\": true,"
+        ]
+    },
+    "AutoWidth": {
+        "prefix": "AutoWidth",
+        "body": [
+            "\"AutoWidth\": true,"
+        ]
+    },
+    "SGridPanel Example": {
+        "prefix": "SGridPanel Example",
+        "body": [
+            "\"SGridPanel\":\n{\n   \"FillColumn\": [[0, 0.5], [1, 0.5]],\n   \"Slots\":\n   [\n       {\n           \"Column_Row\": [0, 0],\n           $1\n       },\n       {\n           \"Column_Row\": [1, 0],\n           $2\n       },\n       {\n           \"Column_Row\": [0, 1],\n           $3\n       },\n       {\n           \"Column_Row\": [1, 1],\n           $4\n       }\n    ]\n}"
+        ]
+    },
+    "Slots": {
+        "prefix": "Slots",
+        "body": [
+            "\"Slots\": [\n    {\n        $1   \n    },\n    {\n        $2   \n    }\n]"
+        ]
+    },
+    "SListView Example": {
+        "prefix": "SListView Example",
+        "body": [
+            "\"SListView\": {\n    \"Aka\": \"SListViewWithRichText\",\n    \"ListItemsSource\": [\n        \"<a id=\\\"browser\\\" href=\\\"https:\\/\\/www.unrealengine.com/\\\" style=\\\"RichText.Editor.Hyperlink\\\">Unreal Engine</><TextStyle FontFamily=\\\"Roboto\\\" FontSize=\\\"13\\\" FontStyle=\\\"Regular\\\" FontColor=\\\"(R=1.000000,G=1.000000,B=0.000000,A=1.000000)\\\"></>\",\n    \"<RichText.red>Red</> <RichText.green>Green</> <RichText.cyan>Blue</>\",\n    \"<TextStyle FontFamily=\\\"Roboto\\\" FontSize=\\\"12\\\" FontStyle=\\\"Regular\\\" FontColor=\\\"(R=0,G=1,B=0,A=1)\\\">Green front size 12</>\",\n    \"Normal Text\"\n    ],\n    \"SHeaderRow\": {\n        \"Columns\": [\n            {\n                \"DefaultLabel\": \"SListView with RichText\",\n                \"FillWidth\": 1\n            }\n        ]\n    },\n    \"RichText\": true,\n    \"OnSelectionChanged\": \"print ('Selected: {}  index: {}'.format(%item, %index))\",\n    \"OnMouseButtonDoubleClick\": \"print ('Double click: {}  index: {}'.format(%item, %index))\"\n}"
+        ]
+    },
+    "SScrollBox Example": {
+        "prefix": "SScrollBox Example",
+        "body": [
+            "\"SScrollBox\": {\n    \"Orientation\": \"Horizontal\",\n    \"Slots\":\n    [\n        {\n            \"SHorizontalBox\": {\n                \"Slots\": [\n                    {\n                        \"padding\": 2,\n                        \"AutoWidth\": true,\n                        \"SButton\": {\n                            \"ContentPadding\": [300, 4],\n                            \"Text\": \"Long Button A\"\n                        }\n                    },\n                    {\n                        \"padding\": 2,\n                        \"AutoWidth\": true,\n                        \"SButton\": {\n                            \"ContentPadding\": [300, 4],\n                            \"Text\": \"Long Button B\"\n                        }\n                    }\n                ]\n            }\n        }\n    ]\n}"
+        ]
+    },
+    "Aka": {
+        "prefix": "Aka",
+        "body": [
+            "\"Aka\": \"$1\""
+        ]
+    },
+    "SUniformWrapPanel": {
+        "prefix": "SUniformWrapPanel",
+        "body": [
+            "\"SUniformWrapPanel\": {\n    \"Slots\":\n    [\n        {\n            $1\n        },\n        {\n            $2\n        }\n    ],\n    \"ToolTipText\": \"UniformWrapPannel will auto wrap the children.\"\n}"
+        ]
+    },
+    "ShadowColorAndOpacity": {
+        "prefix": "ShadowColorAndOpacity",
+        "body": [
+            "\"ShadowColorAndOpacity\": [$1, $2, $3, $4]"
+        ]
+    },
+    "MinDesiredSlotWidth": {
+        "prefix": "MinDesiredSlotWidth",
+        "body": [
+            "\"MinDesiredSlotWidth\": \"$1\""
+        ]
+    },
+    "MaxDesiredSlotWidth": {
+        "prefix": "MaxDesiredSlotWidth",
+        "body": [
+            "\"MaxDesiredSlotWidth\": \"$1\""
+        ]
+    },
+    "Font": {
+        "prefix": "Font",
+        "body": [
+            "\"Font\":{\n    \"Style\": \"$1\" \n    \"StyleName\": \"$2\"\n}"
+        ]
+    },
+    "ImagePathInPlugin": {
+        "prefix": "ImagePathInPlugin",
+        "body": [
+            "\"ImagePathInPlugin\": \"$1\"\n"
+        ]
+    },
+    "Visibility": {
+        "prefix": "Visibility",
+        "body": [
+            "\"Visibility\": \"$1\""
+        ]
+    },
+    "Size": {
+        "prefix": "Size",
+        "body": [
+            "\"Size\": [$1, $2 ]"
+        ]
+    },
+    "MinDesiredWidth": {
+        "prefix": "MinDesiredWidth",
+        "body": [
+            "\"MinDesiredWidth\": \"$1\""
+        ]
+    },
+    "ImagePath": {
+        "prefix": "ImagePath",
+        "body": [
+            "\"ImagePath\": \"$1\""
+        ]
+    },
+    "SBorder Example": {
+        "prefix": "SBorder Example",
+        "body": [
+            "\"SBorder\": {\n    \"BorderBackgroundColor\": [1, 1, 1, 1],\n    \"BorderImage\": {\n        \"Style\": \"FEditorStyle\",\n        \"Brush\": \"WhiteBrush\"\n    },\n    \"ColorAndOpacity\": [0, 1, 1, 1],\n    \"ToolTipText\": \"ToolTipText\",\n    \"Content\":{\n        $1\n    }\n}"
+        ]
+    },
+    "SBox Example": {
+        "prefix": "SBox Example",
+        "body": [
+            "\"SBox\":\n{\n    \"HAlign\": \"Right\",\n    \"VAlign\": \"Bottom\",\n    \n    \"HeightOverride\": 80,\n    \"WidthOverride\": 80,\n    \n    \"MinDesiredHeight\": 100,\n    \"MaxDesiredHeight\": 200,\n    \n    \"MinDesiredWidth\": 100,\n    \"MaxDesiredWidth\": 200,\n    \n    \"Padding\": [10, 20]\n    \"Content\": {\n        $1\n    }\n}"
+        ]
+    },
+    "SBreadcrumbTrail Example": {
+        "prefix": "SBreadcrumbTrail Example",
+        "body": [
+            "\"SBreadcrumbTrail\":\n{\n    \"Aka\": \"$1\",\n    \"type\": \"string\",\n    \"ButtonContentPadding\": [10, 5],\n    \"ColorAndOpacity\": [1, 1, 0, 1],\n    \"ForegroundColor\": [0, 1, 1, 1],\n    \"OnCrumbClick\": \"print(%)\"\n}"
+        ]
+    },
+    "SButton Example": {
+        "prefix": "SButton Example",
+        "body": [
+            "\"SButton\":\n{\n    \"ButtonColorAndOpacity\": [1, 1, 0.5, 1],\n    \"ButtonStyle\":{\n        \"Style\": \"FEditorStyle\",\n        \"StyleName\": \"SimpleRoundButton\"\n    },\n    \"ColorAndOpacity\": [0, 1, 1, 1],\n    \"Content\": {\n        \"SImage\": {\n            \"Aka\": \"ImageInButton_A\", \n            \"ImagePathInPlugin\": \"Resources/Icon128.png\",\n            \"DesiredSizeOverride\": [64, 64]\n        }\n    },\n    \"ForegroundColor\": [0, 1, 1, 1],\n    \"Text\": \"$1\",\n    \"TextStyle\": {\n        \"Style\": \"FEditorStyle\",\n        \"StyleName\": \"LargeText\"\n    },\n    \"HAlign\": \"Center\",\n    \"VAlign\": \"Center\",\n    \"ContentPadding\": 4,\n    \"ToolTipText\": \"ColorAndOpacity will apply to Content, ForegroundColor will for text.\",\n    \"OnClick\": \"print('Button $2 clicked.')\"\n}"
+        ]
+    },
+    "SCanvas Example": {
+        "prefix": "SCanvas Example",
+        "body": [
+            "\"SCanvas\": {\n    \"ToolTipText\": \"Canvas is a layout widget that allows you to arbitrary position and size child widgets in a relative coordinate space\",\n    \"Slots\": [\n        {\n            \"Position\": [97, 0],\n            \"Size\": [25, 20],\n            \"SButton\": {\"Text\": \"^_^\", \"ButtonColorAndOpacity\": [0, 5, 0 ,1], \"OnClick\": \"print('Head.')\", \"ForegroundColor\": [0,0,1,1]\n            }\n        },\n        {\n            \"Position\": [90, 22],\n            \"Size\": [40, 40],\n            \"SButton\": {\"Text\": \"snow\\n man\", \"ButtonColorAndOpacity\": [0, 2, 0 ,1], \"OnClick\": \"print('I am a snow man.')\", \"ForegroundColor\": [0,0,1,1] }\n        }\n    ]\n}"
+        ]
+    },
+    "SCheckBox Example": {
+        "prefix": "SCheckBox Example",
+        "body": [
+            "\"SCheckBox\":\n{\n    \"CheckBoxStyle\": {\n        \"Style\": \"FCoreStyle\",\n        \"StyleName\": \"ToggleButtonCheckbox\"\n    },\n    \"ColorAndOpacity\": [1, 1, 1, 1],\n    \"Content\": {\n        \"HAlign\": \"Center\",\n        \"SBox\": {\n            \"VAlign\": \"Center\",\n            \"HAlign\": \"Center\",\n            \"Padding\" : [10, 10],\n            \"Content\":\n            {\n                \"STextBlock\":\n                {\n                    \"Text\": \"Toggle Button is actually a SCheckBox\"\n                }\n            }\n        }\n    },\n    \"ForegroundColor\": [1, 1, 0.5, 1],\n    \"HAlign\": \"Left\",\n    \"Padding\": 6,\n    \"IsChecked\": true,\n    \"OnCheckStateChanged\": \"print('checked: %'.format(%))\"\n}"
+        ]
+    },
+    "SColorBlock Example": {
+        "prefix": "SColorBlock Example",
+        "body": [
+            "\"SColorBlock\": \n{\n    \"Color\":[$1, $2, $3, $4],\n    \"ColorIsHSV\": false, \n    \"OnMouseButtonDown\": \"print('mouse down')\",\n    \"ShowBackgroundForAlpha\": true,\n    \"Size\": [200, 50],\n    \"UseSRGB\": true\n}"
+        ]
+    },
+    "SComboButton Example": {
+        "prefix": "SComboButton Example",
+        "body": [
+            "\"SComboButton\": {\n    \n    \"ButtonColorAndOpacity\": [1, 1, 1, 1],\n    \"ButtonContent\": {\n        \"STextBlock\": {\n            \"Text\": \"Choose And Trigger the Command\"\n        }\n    },\n    \"ButtonStyle\":{\n        \"Style\": \"FEditorStyle1\",\n        \"StyleName\": \"FlatButton.Default\"\n    }, \n    \"ContentPadding\": [5, 2],\n    \"ForegroundColor\": [1, 1, 1, 1],\n    \"HAlign\": \"Center\",\n    \"HasDownArrow\": true,\n    \"OnGetMenuContent\": {\n        \"items\": [\n            {\"name\": \"$1\"          , \"Command\": \"print('$2')\" },\n            {\"name\": \"$3\"          , \"Command\": \"print('$4')\" },\n            {\"name\": \"$5\"          , \"Command\": \"print('$6')\" }\n        ]\n    },\n    \"VAlign\": \"Bottom\"\n}"
+        ]
+    },
+    "SDropTarget Example": {
+        "prefix": "SDropTarget Example",
+        "body": [
+            "\"SDropTarget\": {\n   \"ColorAndOpacity\": [1, 1, 1, 1],\n   \"ForegroundColor\": [1, 1, 1, 1],\n   \"Text\": \"SDropTarget\",\n   \"HAlign\": \"Center\",\n   \"OnDrop\": \"$1.on_drop_func(%**kwargs)\",\n   \"Content\":\n   {             \n        \"SMultiLineEditableTextBox\": {\n            \"Margin\": [0, 20],\n            \"Text\": \"Drag And Drop Something here.\"\n        }\n   }\n}"
+        ]
+    },
+    "SExpandableArea Example": {
+        "prefix": "SExpandableArea Example",
+        "body": [
+            "\"SExpandableArea\": {\n    \"Aka\": \"expandable_area\",\n    \"AllowAnimatedTransition\": true,\n    \"BorderImage\": {\n        \"Style\": \"FEditorStyle\",\n        \"Brush\": \"DetailsView.CategoryTop\"\n    },\n    \"ButtonColorAndOpacity\": [1, 1, 1, 1], \n    \"Padding\": 4,\n    \"HeaderPadding\": [5, 3],\n    \"InitiallyCollapsed\": false,\n    \"HeaderContent\": {\n        \"STextBlock\": {\n            \"Text\": \"Some Header Text\"\n        }\n    },\n    \"MaxHeight\": 100,\n    \"MinWidth\": 100,\n    \"OnAreaExpansionChanged\": \"print('OnAreaExpansionChanged text: {}'.format(%))\",\n    \"BodyBorderImage\": {\n        \"Style\": \"FAppStyle\",\n        \"Brush\": \"Brushes.Recessed\"\n    },\n    \"BodyBorderBackgroundColor\": [1, 1, 1, 1],\n    \"BodyContent\": {\n        \"SHorizontalBox\": {\n            \"Slots\": [\n                {\n                    \"STextBlock\": { \"Text\": \"Some Body Text\" }\n                },\n                {\n                    \"SButton\": { \"ContentPadding\": 5, \"Text\": \"Some Button In Body Content\" }\n                }\n            ]\n        }\n    }\n}"
+        ]
+    },
+    "SHeader Example": {
+        "prefix": "SHeader Example",
+        "body": [
+            "\"SHeader\":\n{\n    \"Content\":\n    {\n        \"STextBlock\": {\n            \"Text\": \"Some Italic Header\",\n            \"ColorAndOpacity\": [1,1,0,2],\n            \"Justification\": \"Center\",\n            \"Font\": {\n                \"Style\": \"FCoreStyle\",\n                \"StyleName\": \"DefaultFont.Italic.12\"\n            },\n            \"ShadowOffset\": [2,2],\n            \"ShadowColorAndOpacity\": [0,0,0,1]\n        }\n    }\n}"
+        ]
+    },
+    "SHeaderRow Example": {
+        "prefix": "SHeaderRow Example",
+        "body": [
+            "\"SListView<MultiColumn>\": {\n    \"SHeaderRow\": {\n        \"ColorAndOpacity\": [1, 1, 0, 1],\n        \"ForegroundColor\": [1, 0, 1, 1],\n        \"ToolTipText\": \"$1\",\n        \"Columns\":\n        [\n            {\n                \"DefaultLabel\": \"Name\",\n                \"FillWidth\": 0.25\n            },\n            {\n                \"DefaultLabel\": \"A\",\n                \"FillWidth\": 0.25\n            },\n            {\n                \"DefaultLabel\": \"B\",\n                \"FillWidth\": 0.25\n            }\n        ]\n    },\n    \"ListItemsSource\": [ [\"Line 1\", \"a\", \"b\"]]\n}"
+        ]
+    },
+    "SHorizontalBox Example": {
+        "prefix": "SHorizontalBox Example",
+        "body": [
+            "\"SHorizontalBox\": \n{\n    \"ToolTipText\": \"Use 'AutoWidth' and 'SSpacer' to layout the to the right\",\n    \"Slots\": [\n        {\n            \"AutoWidth\": true,\n            \"Padding\": 2,\n            \"SButton\":\n            {\n                \"Text\": \"Widget At Left\",\n                \"HAlign\": \"Center\",\n                \"VAlign\": \"Center\",\n                \"ContentPadding\": 4,\n                \"ToolTipText\": \"Test\",\n                \"OnClick\": \"print('Button Test clicked.')\"\n            }\n        },\n        {\n            \"AutoWidth\": true,\n            \"SMultiLineEditableTextBox\":\n            {\n                \"Text\": \"Text Box follow the left button.\",\n                \"AutoWrapText\": true\n            }\n        },\n        {\n            \"SSpacer\":{}\n        },\n        {\n            \"AutoWidth\": true,\n            \"SButton\": { \"ContentPadding\": 4, \"Text\": \"Right\"}\n        }\n    ]\n}"
+        ]
+    },
+    "SHyperlink Example": {
+        "prefix": "SHyperlink Example",
+        "body": [
+            "\"SHyperlink\":\n{\n    \"ColorAndOpacity\": [1, 1, 1, 1],\n    \"Padding\": [20, 0],\n    \"Style\":\n    {\n        \"Style\": \"FEditorStyle\",\n        \"StyleName\": \"NavigationHyperlink\"\n    },\n    \"Text\": \"www.tacolour.xyz\",\n    \"OnNavigate\": \"print('link clicked.')\"\n}"
+        ]
+    },
+    "SImage Examples": {
+        "prefix": "SImage Examples",
+        "body": [
+            "\"SImage\": {\n    \"Aka\": \"$1\",\n    \"ColorAndOpacity\": [1, 1, 1, 1],\n    \"ImagePath\": \"../ChameleonGallery/Images/cartoon_game_map.png\",\n    \"ToolTipText\": \"'ImagePath' is a relative path with the local ui json file.\",\n    \"DesiredSizeOverride\": [128, 128],\n    \"OnMouseButtonDown\": \"print('clicked')\"\n}\n        "
+        ]
+    },
+    "SListViewMultiColumn Example": {
+        "prefix": "SListViewMultiColumn Example",
+        "body": [
+            "\"SListView<MultiColumn>\": {\n    \"Aka\": \"SListViewMultiColumn_B\",\n    \"EnableAnimatedScrolling\": true,\n    \"SHeaderRow\": {\n        \"Columns\":\n        [\n            {\n                \"DefaultLabel\": \"Line\",\n                \"FillWidth\": 0.25\n            },\n            {\n                \"DefaultLabel\": \"A\",\n                \"FillWidth\": 0.25\n            },\n            {\n                \"DefaultLabel\": \"B\",\n                \"FillWidth\": 0.25\n            },\n            {\n                \"DefaultLabel\": \"C\",\n                \"FillWidth\": 0.25\n            }\n        ]\n    },\n    \"ListItemsSource\": [\n        [\"Line 1\", \"<RichText.red>Red</>\", \"<RichText.green>Green</>\", \"<RichText.cyan>Blue</>\"],\n        [\"Line 2\", \"<RichText.green>Green</>\", \"<RichText.cyan>Blue</>\",\"<RichText.red>Red</>\"],\n        [\"Line 3\", \"<RichText.cyan>Blue</>\",\"<RichText.red>Red</>\", \"<RichText.green>Green</>\"]\n    ],\n    \"OnSelectionChanged\": \"print(%Index)\",\n    \"OnMouseButtonDoubleClick\": \"print('double click: {}'.format(%Index))\",\n    \"RichText\": true\n}"
+        ]
+    },
+    "SMultiLineEditableTextBox Example": {
+        "prefix": "SMultiLineEditableTextBox Example",
+        "body": [
+            "\"SMultiLineEditableTextBox\": {\n    \"AutoWrapText\": true,\n    \"HintText\": \"This is a SMultiLineEditableTextBox\",\n    \"Justification\": \"Center\",\n    \"LineHeightPercentage\": 1.6,\n    \"Margin\": [10, 20],\n    \"Marshaller\": \"ChameleonRichText\",\n    \"OnTextChanged\": \"print(%)\",\n    \"OnTextCommitted\": \"print('input text: {}'.format(%))\",\n    \"SelectAllTextWhenFocused\": true,\n    \"Text\": \"<TextStyle FontFamily=\\\"Roboto\\\" FontSize=\\\"15\\\" FontStyle=\\\"Regular\\\" FontColor=\\\"(R=1,G=0.5,B=0,A=1)\\\">SMultiLineEditableTextBox</>\\n<TextStyle FontFamily=\\\"Roboto\\\" FontSize=\\\"10\\\" FontStyle=\\\"Regular\\\" FontColor=\\\"(R=0.8,G=0.02,B=0,A=1)\\\">SMultiLineEditableTextBox line1</>\\nSMultiLineEditableTextBox line2\",\n    \"ToolTipText\": \"Tool Tips\"\n}"
+        ]
+    },
+    "SMultiLineEditableText Example": {
+        "prefix": "SMultiLineEditableText Example",
+        "body": [
+            "\"SMultiLineEditableText\": {\n    \"AutoWrapText\": true,\n    \"HintText\": \"This is a SMultiLineEditableText\",\n    \"Justification\": \"Center\",\n    \"LineHeightPercentage\": 1.6,\n    \"Margin\": [10, 20],\n    \"Marshaller\": \"ChameleonRichText\",\n    \"OnTextChanged\": \"print(%)\",\n    \"OnTextCommitted\": \"print('input text: {}'.format(%))\",\n    \"SelectAllTextWhenFocused\": true,\n    \"Text\": \"<TextStyle FontFamily=\\\"Roboto\\\" FontSize=\\\"15\\\" FontStyle=\\\"Regular\\\" FontColor=\\\"(R=0,G=0.5,B=1,A=1)\\\">SMultiLineEditableText</>\\n<TextStyle FontFamily=\\\"Roboto\\\" FontSize=\\\"10\\\" FontStyle=\\\"Regular\\\" FontColor=\\\"(R=0.8,G=0.02,B=0,A=1)\\\">is similar with </>\\nSMultiLineEditableTextBox\\n which is not a 'Box'\",\n    \"ToolTipText\": \"Tool Tips\"\n}"
+        ]
+    },
+    "SOverlay Example": {
+        "prefix": "SOverlay Example",
+        "body": [
+            "\"SOverlay\": {\n    \"Slots\":\n    [\n        {\n            \"SImage\": {\n                    \"Aka\": \"ImageBackgroundInSOverlay\",\n                    \"ImagePathInPlugin\": \"Resources/PythonIcon_128x.png\"\n            }\n        },\n        {\n            \"SUniformGridPanel\": {\n                \"Slots\": [\n                    {\n                        \"Column_Row\": [0, 0],\n                        \"SButton\": { \"Text\": \"Tile 0_0\", \"ButtonColorAndOpacity\": [1, 1, 1, 0.5] }\n                    },\n                    {\n                        \"Column_Row\": [1, 0],\n                        \"SButton\": { \"Text\": \"Tile 1_0\", \"ButtonColorAndOpacity\": [1, 1, 1, 0.5] }\n                    },\n                    {\n                        \"Column_Row\": [2, 0],\n                        \"SButton\": { \"Text\": \"Tile 2_0\", \"ButtonColorAndOpacity\": [1, 1, 1, 0.5] }\n                    },\n                    {\n                        \"Column_Row\": [0, 1],\n                        \"SButton\": { \"Text\": \"Tile 0_1\", \"ButtonColorAndOpacity\": [1, 1, 1, 0.5] }\n                    },\n                    {\n                        \"Column_Row\": [1, 1],\n                        \"SButton\": { \"Text\": \"Tile 1_1\", \"ButtonColorAndOpacity\": [1, 1, 1, 0.5]}\n                    },\n                    {\n                        \"Column_Row\": [2, 1],\n                        \"SButton\": { \"Text\": \"Tile 2_1\", \"ButtonColorAndOpacity\": [1, 1, 1, 0.5]}\n                    }\n                ]\n            }\n        }\n    ]\n}"
+        ]
+    },
+    "SProgressBar Example": {
+        "prefix": "SProgressBar Example",
+        "body": [
+            "\"SProgressBar\":\n{\n    \"Aka\": \"$1\",\n    \"FillType\": \"FillFromCenter\",\n    \"Percent\": \"0.5\",\n    \"ToolTipText\": \"Tool Tip\",\n    \"Visibility\": \"HitTestInvisible\"\n}"
+        ]
+    },
+    "SSearchBox Example": {
+        "prefix": "SSearchBox Example",
+        "body": [
+            "\"SSearchBox\": \n{\n    \"ColorAndOpacity\": [1, 1, 1, 1],\n    \"HintText\": \"Type Search Text\",\n    \"ToolTipText\": \"Tool Tip\",\n    \"OnTextChanged\": \"print(%)\",\n    \"OnTextCommitted\": \"print(%)\",\n    \"SelectAllTextWhenFocused\": false,\n    \"DelayChangeNotificationWhiteTyping\": true\n}"
+        ]
+    },
+    "SSeparator Example": {
+        "prefix": "SSeparator Example",
+        "body": [
+            "\"SSeparator\":\n{\n    \"Thickness\":5,\n    \"Orientation\": \"Horizontal\"\n}"
+        ]
+    },
+    "SSpinBox Example": {
+        "prefix": "SSpinBox Example",
+        "body": [
+            "\"SSpinBox\": \n{\n    \"Type\": \"float\",\n    \"Value\": 10.0,\n    \"MinValue\": 0,\n    \"MaxValue\": 100,\n    \"MinSliderValue\": 0,\n    \"maxSliderValue\": 100,\n    \"Delta\": 0.05,\n    \"OnValueChanged\": \"print(%)\"\n}"
+        ]
+    },
+    "SSplitter Example": {
+        "prefix": "SSplitter Example",
+        "body": [
+            "\"SSplitter\": {\n    \"MinSizeValue\": 50,\n    \"Orientation\": \"Horizontal\",\n    \"PhysicalSplitterHandleSize\": 4,\n    \"ResizeMode\": \"FixedPosition\",\n    \"Slots\": [\n        {\n            \"Value\": 0.4,\n            \"SButton\": {\n                \"ContentPadding\": 10,\n                \"Text\": \"ButtonA\"\n            }\n        },\n        {\n            \"Value\": 0.6,\n            \"SButton\": {\n                \"ContentPadding\": 10,\n                \"Text\": \"ButtonB\"\n            }\n        }\n\n    ]\n}"
+        ]
+    },
+    "STreeView Example": {
+        "prefix": "STreeView Example",
+        "body": [
+            "\"STreeView\":\n{\n    \"Aka\": \"TreeViewA\",\n    \"SHeaderRow\": {\n        \"Columns\": [\n            {\n                \"DefaultLabel\": \"Tree View List\",\n                \"FillWidth\": 1\n            }\n        ]\n    },\n    \"TreeItemSource\": [\"ItemA\", \"ItemB\", \"ItemC\", \"ItemD\", \"ItemE\", \"ItemF\" ],\n    \"TreeItemParentIndices\": [-1, 0, 0, 2, 1, 1],\n    \"OnMouseButtonDoubleClick\": \"print('Doublel click: %Index, %Item')\",\n    \"OnSelectionChanged\": \"print('Selection Change: %Index, %Item')\",\n    \"OnContextMenuOpening\":\n    {\n        \"items\":\n        [\n            {\n                \"name\": \"ContextMenu A\",\n                \"Command\": \"print ('ContextMenu A')\"\n            },\n            {\n                \"name\": \"ContextMenu B\",\n                \"Command\": \"print ('ContextMenu B')\"\n            }\n        ]\n    }\n}"
+        ]
+    },
+    "SUniformGridPanel Example": {
+        "prefix": "SUniformGridPanel Example",
+        "body": [
+            "\"SUniformGridPanel\": {\n    \"MinDesiredSlotHeight\": 50,\n    \"MinDesiredSlotWidth\": 50,\n    \"SlotPadding\": 5,\n    \"Slots\": [\n        {\n            \"Column_Row\": [0, 0],\n            \"SButton\": { \"Text\": \"Placeholder A\", \"ContentPadding\": 10 }\n        },\n        {\n            \"Column_Row\": [1, 0],\n            \"SButton\": { \"Text\": \"Placeholder B\", \"ContentPadding\": 10 }\n        },\n        {\n            \"Column_Row\": [2, 0],\n            \"SButton\": { \"Text\": \"Placeholder C\", \"ContentPadding\": 10 }\n        },\n        {\n            \"Column_Row\": [0, 1],\n            \"SButton\": { \"Text\": \"Placeholder D\", \"ContentPadding\": 10 }\n        },\n        {\n            \"Column_Row\": [1, 1],\n            \"SButton\": { \"Text\": \"Placeholder E\", \"ContentPadding\": 10 }\n        },\n        {\n            \"Column_Row\": [2, 1],\n            \"SButton\": { \"Text\": \"Placeholder F\", \"ContentPadding\": 10 }\n        }\n    ]\n}"
+        ]
+    },
+    "SVerticalBox Example": {
+        "prefix": "SVerticalBox Example",
+        "body": [
+            "\"SVerticalBox\":\n{\n    \"ToolTipText\": \"Use 'AutoHeight' and 'SSpacer' to layout status bar at bottom\",\n    \"Slots\": [\n        {\n            \"AutoHeight\": true,\n            \"STextBlock\":\n            {\n                \"Text\": \"Text Content\"\n            }\n        },\n        {\n            \"AutoHeight\": true,\n            \"Padding\": 2,\n            \"SButton\":\n            {\n                \"Text\": \"Some Button\",\n                \"HAlign\": \"Center\",\n                \"VAlign\": \"Center\",\n                \"ContentPadding\": 4,\n                \"ToolTipText\": \"Test\",\n                \"OnClick\": \"print('Button Test clicked.')\"\n            }\n        },\n        {\n            \"SSpacer\":{}\n        },\n        {\n            \"AutoHeight\": true,\n            \"STextBlock\":\n            {\n                \"Text\": \"Status Bar\",\n                \"ColorAndOpacity\": [0, 0.5, 1, 1],\n                \"Font\": {\n                    \"Style\": \"FEditorStyle\",\n                    \"StyleName\": \"FontAwesome.9\"\n                },\n                \"ShadowOffset\": [2, 2],\n                \"ShadowColorAndOpacity\": [0, 0, 0, 0.75],\n                \"Justification\": \"Left\"\n            }\n        }\n    ]\n}"
+        ]
+    },
+    "SEditableTextBox Example": {
+        "prefix": "SEditableTextBox Example",
+        "body": [
+            "\"SEditableTextBox\":\n{\n    \"AutoWrapText\": true,\n    \"ColorAndOpacity\": [1, 1, 1, 1],\n    \"Font\": {\n        \"Style\": \"FCoreStyle\",\n        \"StyleName\": \"DefaultFont.Bold.11\"\n    },\n    \"HintText\": \"Readonly Text Can't Be Edit.\",\n    \"IsReadOnly\": true,\n    \"Justification\": \"Left\",\n    \"MinDesiredWidth\": 100,\n    \"Text\": \"Some readonly text.\",\n    \"OnTextChanged\": \"print(%)\",\n    \"SelectAllTextWhenFocused\": true,\n    \"OnTextCommitted\": \"print('input text: {}'.format(%))\"\n}"
+        ]
+    },
+    "SEditableTextBox": {
+        "prefix": "SEditableTextBox",
+        "body": [
+            "\"SEditableTextBox\":\n{\n    \"Text\": \"Some Text\"\n}"
+        ]
+    },
+    "SEditableText": {
+        "prefix": "SEditableText",
+        "body": [
+            "\"SEditableText\":\n{\n    \"Text\": \"Some Text\"\n}"
+        ]
+    },
+    "SEditableText Example": {
+        "prefix": "SEditableText Example",
+        "body": [
+            "\"SEditableText\":\n{\n    \"ColorAndOpacity\": [1, 1, 1, 1],\n    \"Font\": {\n        \"Style\": \"FCoreStyle\",\n        \"StyleName\": \"DefaultFont.Bold.11\"\n    },\n    \"HintText\": \"Readonly Text Can't Be Edit.\",\n    \"IsReadOnly\": true,\n    \"Justification\": \"Left\",\n    \"MinDesiredWidth\": 100,\n    \"Text\": \"Some readonly text.\",\n    \"OnTextChanged\": \"print(%)\",\n    \"SelectAllTextWhenFocused\": true,\n    \"OnTextCommitted\": \"print('input text: {}'.format(%))\"\n}"
+        ]
+    },
+    "SButton": {
+        "prefix": "SButton",
+        "body": [
+            "\"SButton\": { \"Text\": \"$1\" }"
+        ]
+    },
+    "FillWidth": {
+        "prefix": "FillWidth",
+        "body": [
+            "\"FillWidth\": $1,"
+        ]
+    },
+    "FillHeight": {
+        "prefix": "FillHeight",
+        "body": [
+            "\"FillHeight\": $1,"
+        ]
+    },
+    "ColorAndOpacity": {
+        "prefix": "ColorAndOpacity",
+        "body": [
+            "\"ColorAndOpacity\": [$1, $2, $3, $4],"
+        ]
+    },
+    "ButtonColorAndOpacity": {
+        "prefix": "ButtonColorAndOpacity",
+        "body": [
+            "\"ButtonColorAndOpacity\": [$1, $2, $3, $4],"
+        ]
+    },
+    "ContentPadding": {
+        "prefix": "ContentPadding",
+        "body": [
+            "\"ContentPadding\": $1"
+        ]
+    },
+    "BorderImage": {
+        "prefix": "BorderImage",
+        "body": [
+            "\"BorderImage\": {\n                \"Style\": \"FCoreStyle\",\n                \"Brush\": \"ToolPanel.GroupBorder\"\n            },"
+        ]
+    },
+    "SDetailsView": {
+        "prefix": "SDetailsView",
+        "body": [
+            "\"SDetailsView\": {\n    \"Aka\": \"$1\"\n}"
+        ]
+    },
+    "SWebBrowser": {
+        "prefix": "SWebBrowser",
+        "body": [
+            "\"SWebBrowser\":\n{\n    \"Aka\": \"$1\",\n    \"URL\": \"$2\",\n    \"ShowControls\": true,\n    \"ShowAddressBar\": true\n}"
+        ]
+    },
+    "SWebBrowserExample": {
+        "prefix": "SWebBrowserExample",
+        "body": [
+            "\"SWebBrowser\":\n{\n    \"URL\": \"$1\",\n    \"Aka\": \"$2\",\n    \"ShowControls\": true,\n    \"ShowAddressBar\": true,\n    \"ShowErrorMessage\": true,\n    \"SupportsTransparency\": true,\n    \"SupportsThumbMouseButtonNavigation\": true,\n    \"ShowInitialThrobber\": true,\n    \"BackgroundColor\" : [255, 255, 255, 255],\n    \"BrowserFrameRate\": 60\n}"
+        ]
+    },
+    "SDetailsViewExample": {
+        "prefix": "SDetailsViewExample",
+        "body": [
+            "\"SDetailsView\": {\n    \"Aka\": \"$1\",\n    \"Lockable\": true,\n    \"UpdatesFromSelection\": false,\n    \"AllowSearch\": true,\n    \"NameAreaSettings\": \"$2\",\n    \"HideSelectionTip\": true,\n    \"SearchInitialKeyFocus\": true\n}"
+        ]
+    },
+    "HAlign": {
+        "prefix": "HAlign",
+        "body": [
+            "\"HAlign\": \"$1\","
+        ]
+    },
+    "VAlign": {
+        "prefix": "VAlign",
+        "body": [
+            "\"VAlign\": \"$1\","
+        ]
+    },
+    "OnClick": {
+        "prefix": "OnClick",
+        "body": [
+            "\"OnClick\": \"$1\""
+        ]
+    },
+    "IsReadOnly": {
+        "prefix": "IsReadOnly",
+        "body": [
+            "\"IsReadOnly\": \"$1\""
+        ]
+    }
+}
