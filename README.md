@@ -1,8 +1,8 @@
-# Pycharm live-templates for [TAPython](https://github.com/cgerchenhp/UE_TAPython_Plugin_Release)
-The pycharm live-templelates for coding TAPython's slate UI
+# Pycharm&VSCode live-templates for [TAPython](https://github.com/cgerchenhp/UE_TAPython_Plugin_Release)
+The pycharm&vscode live-templelates for coding TAPython's slate UI
 
 
-The Sketch tool of [TAPython](https://github.com/cgerchenhp/UE_TAPython_Plugin_Release) let developer [preview the unreal Slate UI in realtime](https://www.tacolor.xyz/pages/TAPython.html#sketch-tool-for-designtweaking-ui). With the live-templates in Pycharm, it can be considerably quicker when coding the UI widgets. 
+The Sketch tool of [TAPython](https://github.com/cgerchenhp/UE_TAPython_Plugin_Release) let developer [preview the unreal Slate UI in realtime](https://www.tacolor.xyz/pages/TAPython.html#sketch-tool-for-designtweaking-ui). With the live-templates in Pycharm&VSCode, it can be considerably quicker when coding the UI widgets. 
 
 With the live-templates, this example below, which has 8 buttons in a Fibonacci layout, only costs **less than 90 seconds** for coding. 
 
