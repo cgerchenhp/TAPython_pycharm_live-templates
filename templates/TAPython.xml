@@ -829,7 +829,7 @@
       <option name="JSON_STRING_VALUES" value="false" />
     </context>
   </template>
-  <template name="HAlign" value="&quot;HAlign&quot;: &quot;$HAlign$&quot;," toReformat="false" toShortenFQNames="true">
+  <template name="HAlign" value="&quot;HAlign&quot;: &quot;$HAlign$&quot;," description="" toReformat="false" toShortenFQNames="true">
     <variable name="HAlign" expression="" defaultValue="&quot;Center&quot;" alwaysStopAt="true" />
     <context>
       <option name="JSON" value="true" />
@@ -837,7 +837,7 @@
       <option name="JSON_STRING_VALUES" value="false" />
     </context>
   </template>
-  <template name="VAlign" value="&quot;VAlign&quot;: &quot;$VAlign$&quot;," toReformat="false" toShortenFQNames="true">
+  <template name="VAlign" value="&quot;VAlign&quot;: &quot;$VAlign$&quot;," description="" toReformat="false" toShortenFQNames="true">
     <variable name="VAlign" expression="" defaultValue="&quot;Center&quot;" alwaysStopAt="true" />
     <context>
       <option name="JSON" value="true" />
@@ -845,7 +845,7 @@
       <option name="JSON_STRING_VALUES" value="false" />
     </context>
   </template>
-  <template name="OnClick" value="&quot;OnClick&quot;: &quot;$pycmd$&quot;" toReformat="false" toShortenFQNames="true">
+  <template name="OnClick" value="&quot;OnClick&quot;: &quot;$pycmd$&quot;" description="" toReformat="false" toShortenFQNames="true">
     <variable name="pycmd" expression="" defaultValue="&quot;&quot;" alwaysStopAt="true" />
     <context>
       <option name="JSON" value="true" />
@@ -853,12 +853,18 @@
       <option name="JSON_STRING_VALUES" value="false" />
     </context>
   </template>
-  <template name="IsReadOnly" value="&quot;IsReadOnly&quot;: &quot;$IsReadOnly$&quot;" toReformat="false" toShortenFQNames="true">
+  <template name="IsReadOnly" value="&quot;IsReadOnly&quot;: &quot;$IsReadOnly$&quot;" description="" toReformat="false" toShortenFQNames="true">
     <variable name="IsReadOnly" expression="" defaultValue="&quot;true&quot;" alwaysStopAt="true" />
     <context>
       <option name="JSON" value="true" />
       <option name="JSON_PROPERTY_KEYS" value="false" />
       <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="ChameleonPython" value="import unreal&#10;from Utilities.Utils import Singleton&#10;&#10;class $YourClass$(metaclass=Singleton):&#10;    def __init__(self, json_path:str):&#10;        self.json_path = json_path&#10;        self.data:unreal.ChameleonData = unreal.PythonBPLib.get_chameleon_data(self.json_path)&#10;        " toReformat="false" toShortenFQNames="true">
+    <variable name="YourClass" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python_Top_Level" value="true" />
     </context>
   </template>
 </templateSet>
