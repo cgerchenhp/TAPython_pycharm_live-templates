@@ -16,10 +16,11 @@
       <option name="JSON_STRING_VALUES" value="false" />
     </context>
   </template>
-  <template name="Chameleon" value="{&#10;&#9;&quot;TabLabel&quot;: &quot;A Chameleon Tool&quot;,&#10;&#9;&quot;InitTabSize&quot;: [400, 250],&#10;&#9;&quot;InitTabPosition&quot;: [200, 100],&#10;    &quot;InitPyCmd&quot;: &quot;import $Package$; $your_tool_inst$ = $Package$.$your_module$.$your_class$(%JsonPath)&quot;,&#10;    &quot;Root&quot;: {&#10;        $Content$&#10;    }&#10;}" description="" toReformat="false" toShortenFQNames="true">
+  <template name="Chameleon" value="{&#10;&#9;&quot;TabLabel&quot;: &quot;$tool_tab_name$&quot;,&#10;&#9;&quot;InitTabSize&quot;: [400, 250],&#10;&#9;&quot;InitTabPosition&quot;: [200, 100],&#10;    &quot;InitPyCmd&quot;: &quot;import $Package$; $your_tool_inst$ = $Package$.$your_module$.$your_class$(%JsonPath)&quot;,&#10;    &quot;Root&quot;: {&#10;        $Content$&#10;    }&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="tool_tab_name" expression="spaceSeparated(fileNameWithoutExtension())" defaultValue="" alwaysStopAt="true" />
     <variable name="Package" expression="" defaultValue="&quot;somepackage&quot;" alwaysStopAt="true" />
     <variable name="your_tool_inst" expression="" defaultValue="&quot;your_tool_instance&quot;" alwaysStopAt="true" />
-    <variable name="your_module" expression="" defaultValue="&quot;somemodule&quot;" alwaysStopAt="true" />
+    <variable name="your_module" expression="fileNameWithoutExtension()" defaultValue="&quot;somemodule&quot;" alwaysStopAt="true" />
     <variable name="your_class" expression="" defaultValue="&quot;SomeClass&quot;" alwaysStopAt="true" />
     <variable name="Content" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
@@ -101,7 +102,8 @@
       <option name="JSON_STRING_VALUES" value="false" />
     </context>
   </template>
-  <template name="SDropTarget" value="&quot;SDropTarget&quot;: {&#10;   &quot;Text&quot;: &quot;SDropTarget&quot;,&#10;   &quot;HAlign&quot;: &quot;Center&quot;,&#10;   &quot;OnDrop&quot;: &quot;$YourTool$.on_drop_func(%**kwargs)&quot;,&#10;   &quot;Content&quot;:&#10;   {&#10;        $Content$&#10;   }&#10;}" description="SDropTarget" toReformat="false" toShortenFQNames="true">
+  <template name="SDropTarget" value="&quot;SDropTarget&quot;: {&#10;   &quot;Aka&quot;: &quot;$Aka$&quot;,&#10;   &quot;HAlign&quot;: &quot;Center&quot;,&#10;   &quot;OnDrop&quot;: &quot;$YourTool$.on_drop_func(%**kwargs)&quot;,&#10;   &quot;Content&quot;:&#10;   {&#10;        $Content$&#10;   }&#10;}" description="SDropTarget" toReformat="false" toShortenFQNames="true">
+    <variable name="Aka" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="YourTool" expression="" defaultValue="&quot;your_tool&quot;" alwaysStopAt="true" />
     <variable name="Content" expression="" defaultValue=" &quot;\&quot;SBox\&quot;: {}&quot;" alwaysStopAt="true" />
     <context>
@@ -568,7 +570,8 @@
       <option name="JSON_STRING_VALUES" value="false" />
     </context>
   </template>
-  <template name="SDropTarget Example" value="&quot;SDropTarget&quot;: {&#10;   &quot;ColorAndOpacity&quot;: [1, 1, 1, 1],&#10;   &quot;ForegroundColor&quot;: [1, 1, 1, 1],&#10;   &quot;Text&quot;: &quot;SDropTarget&quot;,&#10;   &quot;HAlign&quot;: &quot;Center&quot;,&#10;   &quot;OnDrop&quot;: &quot;$YourTool$.on_drop_func(%**kwargs)&quot;,&#10;   &quot;Content&quot;:&#10;   {             &#10;        &quot;SMultiLineEditableTextBox&quot;: {&#10;            &quot;Margin&quot;: [0, 20],&#10;            &quot;Text&quot;: &quot;Drag And Drop Something here.&quot;&#10;        }&#10;   }&#10;}" description="SDropTarget with most parameters" toReformat="false" toShortenFQNames="true">
+  <template name="SDropTarget Example" value="&quot;SDropTarget&quot;: {&#10;   &quot;ColorAndOpacity&quot;: [1, 1, 1, 1],&#10;   &quot;ForegroundColor&quot;: [1, 1, 1, 1],&#10;   &quot;Aka&quot;: &quot;$Aka$&quot;,&#10;   &quot;HAlign&quot;: &quot;Center&quot;,&#10;   &quot;OnDrop&quot;: &quot;$YourTool$.on_drop_func(%**kwargs)&quot;,&#10;   &quot;Content&quot;:&#10;   {             &#10;        &quot;SMultiLineEditableTextBox&quot;: {&#10;            &quot;Margin&quot;: [0, 20],&#10;            &quot;Text&quot;: &quot;Drag And Drop Something here.&quot;&#10;        }&#10;   }&#10;}" description="SDropTarget with most parameters" toReformat="false" toShortenFQNames="true">
+    <variable name="Aka" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="YourTool" expression="" defaultValue="&quot;your_tool&quot;" alwaysStopAt="true" />
     <context>
       <option name="JSON" value="true" />
@@ -705,7 +708,7 @@
       <option name="JSON_STRING_VALUES" value="false" />
     </context>
   </template>
-  <template name="SEditableTextBox Example" value="&quot;SEditableTextBox&quot;:&#10;{&#10;    &quot;AutoWrapText&quot;: true,&#10;    &quot;ColorAndOpacity&quot;: [1, 1, 1, 1],&#10;    &quot;Font&quot;: {&#10;        &quot;Style&quot;: &quot;FCoreStyle&quot;,&#10;        &quot;StyleName&quot;: &quot;DefaultFont.Bold.11&quot;&#10;    },&#10;    &quot;HintText&quot;: &quot;Readonly Text Can't Be Edit.&quot;,&#10;    &quot;IsReadOnly&quot;: true,&#10;    &quot;Justification&quot;: &quot;Left&quot;,&#10;    &quot;MinDesiredWidth&quot;: 100,&#10;    &quot;Text&quot;: &quot;Some readonly text.&quot;,&#10;    &quot;OnTextChanged&quot;: &quot;print(%)&quot;,&#10;    &quot;SelectAllTextWhenFocused&quot;: true,&#10;    &quot;OnTextCommitted&quot;: &quot;print('input text: {}'.format(%))&quot;&#10;}" description="SEditableTextBox Example with most parameters" toReformat="false" toShortenFQNames="true">
+  <template name="SEditableTextBox Example" value="&quot;SEditableTextBox&quot;:&#10;{&#10;    &quot;AutoWrapText&quot;: true,&#10;    &quot;ColorAndOpacity&quot;: [1, 1, 1, 1],&#10;    &quot;Font&quot;: {&#10;        &quot;Style&quot;: &quot;FCoreStyle&quot;,&#10;        &quot;StyleName&quot;: &quot;DefaultFont.Bold.11&quot;&#10;    },&#10;    &quot;HintText&quot;: &quot;Readonly Text Can't Be Edit.&quot;,&#10;    &quot;IsReadOnly&quot;: true,&#10;    &quot;Justification&quot;: &quot;Left&quot;,&#10;    &quot;MinDesiredWidth&quot;: 100,&#10;    &quot;Text&quot;: &quot;Some readonly text.&quot;,&#10;    &quot;OnTextChanged&quot;: &quot;print(%)&quot;,&#10;    &quot;SelectAllTextWhenFocused&quot;: true,&#10;    &quot;IsPassword&quot;: false,&#10;    &quot;OnTextCommitted&quot;: &quot;print('input text: {}'.format(%))&quot;&#10;}" description="SEditableTextBox Example with most parameters" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="JSON" value="true" />
       <option name="JSON_PROPERTY_KEYS" value="false" />
@@ -726,7 +729,7 @@
       <option name="JSON_STRING_VALUES" value="false" />
     </context>
   </template>
-  <template name="SEditableText Example" value="&quot;SEditableText&quot;:&#10;{&#10;    &quot;ColorAndOpacity&quot;: [1, 1, 1, 1],&#10;    &quot;Font&quot;: {&#10;        &quot;Style&quot;: &quot;FCoreStyle&quot;,&#10;        &quot;StyleName&quot;: &quot;DefaultFont.Bold.11&quot;&#10;    },&#10;    &quot;HintText&quot;: &quot;Readonly Text Can't Be Edit.&quot;,&#10;    &quot;IsReadOnly&quot;: true,&#10;    &quot;Justification&quot;: &quot;Left&quot;,&#10;    &quot;MinDesiredWidth&quot;: 100,&#10;    &quot;Text&quot;: &quot;Some readonly text.&quot;,&#10;    &quot;OnTextChanged&quot;: &quot;print(%)&quot;,&#10;    &quot;SelectAllTextWhenFocused&quot;: true,&#10;    &quot;OnTextCommitted&quot;: &quot;print('input text: {}'.format(%))&quot;&#10;}" description="SEditableText Example with most parameters" toReformat="false" toShortenFQNames="true">
+  <template name="SEditableText Example" value="&quot;SEditableText&quot;:&#10;{&#10;    &quot;ColorAndOpacity&quot;: [1, 1, 1, 1],&#10;    &quot;Font&quot;: {&#10;        &quot;Style&quot;: &quot;FCoreStyle&quot;,&#10;        &quot;StyleName&quot;: &quot;DefaultFont.Bold.11&quot;&#10;    },&#10;    &quot;HintText&quot;: &quot;Readonly Text Can't Be Edit.&quot;,&#10;    &quot;IsReadOnly&quot;: true,&#10;    &quot;Justification&quot;: &quot;Left&quot;,&#10;    &quot;MinDesiredWidth&quot;: 100,&#10;    &quot;Text&quot;: &quot;Some readonly text.&quot;,&#10;    &quot;OnTextChanged&quot;: &quot;print(%)&quot;,&#10;    &quot;SelectAllTextWhenFocused&quot;: true,&#10;    &quot;IsPassword&quot;: false,&#10;    &quot;OnTextCommitted&quot;: &quot;print('input text: {}'.format(%))&quot;&#10;}" description="SEditableText Example with most parameters" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="JSON" value="true" />
       <option name="JSON_PROPERTY_KEYS" value="false" />
@@ -861,10 +864,42 @@
       <option name="JSON_STRING_VALUES" value="false" />
     </context>
   </template>
-  <template name="ChameleonPython" value="import unreal&#10;from Utilities.Utils import Singleton&#10;&#10;class $YourClass$(metaclass=Singleton):&#10;    def __init__(self, json_path:str):&#10;        self.json_path = json_path&#10;        self.data:unreal.ChameleonData = unreal.PythonBPLib.get_chameleon_data(self.json_path)&#10;        " toReformat="false" toShortenFQNames="true">
+  <template name="ChameleonPython" value="import unreal&#10;from Utilities.Utils import Singleton&#10;&#10;class $YourClass$(metaclass=Singleton):&#10;    def __init__(self, json_path:str):&#10;        self.json_path = json_path&#10;        self.data:unreal.ChameleonData = unreal.PythonBPLib.get_chameleon_data(self.json_path)&#10;        " description="" toReformat="false" toShortenFQNames="true">
     <variable name="YourClass" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python_Top_Level" value="true" />
+    </context>
+  </template>
+  <template name="SDPIScaler" value="&quot;SDPIScaler&quot;: {&#10;    &quot;Aka&quot;: &quot;Scaler&quot;,&#10;    &quot;DPIScaler&quot;: 1,&#10;    &quot;Content&quot;: {&#10;        $Content$&#10;    }&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="Content" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="MenuEntries" value="&quot;MenuEntries&quot;: [$Aka$],&#10;&quot;Icon&quot;: {&quot;style&quot;: &quot;ChameleonStyle&quot;, &quot;name&quot;: &quot;Picture&quot; }," description="" toReformat="false" toShortenFQNames="true">
+    <variable name="Aka" expression="" defaultValue="&quot;Your Menu Item&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="Icon" value="&quot;Icon&quot;: {&quot;style&quot;: &quot;ChameleonStyle&quot;, &quot;name&quot;: &quot;$IconName$&quot; }," description="" toReformat="false" toShortenFQNames="true">
+    <variable name="IconName" expression="" defaultValue="&quot;Picture&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="Tile" value="&quot;Tile&quot;: &quot;$Tile$&quot;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="Tile" expression="" defaultValue="&quot;Both&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
     </context>
   </template>
 </templateSet>
