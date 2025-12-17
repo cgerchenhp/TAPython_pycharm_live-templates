@@ -878,7 +878,7 @@
       <option name="JSON_STRING_VALUES" value="false" />
     </context>
   </template>
-  <template name="MenuEntries" value="&quot;MenuEntries&quot;: [$Aka$],&#10;&quot;Icon&quot;: {&quot;style&quot;: &quot;ChameleonStyle&quot;, &quot;name&quot;: &quot;Picture&quot; }," description="" toReformat="false" toShortenFQNames="true">
+  <template name="MenuEntries" value="&quot;MenuEntries&quot;: [&quot;$Aka$&quot;],&#10;&quot;Icon&quot;: {&quot;style&quot;: &quot;ChameleonStyle&quot;, &quot;name&quot;: &quot;Picture&quot; }," description="" toReformat="false" toShortenFQNames="true">
     <variable name="Aka" expression="" defaultValue="&quot;Your Menu Item&quot;" alwaysStopAt="true" />
     <context>
       <option name="JSON" value="true" />
@@ -896,6 +896,99 @@
   </template>
   <template name="Tile" value="&quot;Tile&quot;: &quot;$Tile$&quot;" description="" toReformat="false" toShortenFQNames="true">
     <variable name="Tile" expression="" defaultValue="&quot;Both&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="IGNORE_THIS_LINE" value="// #TAPYTHON_IGNORE_THIS_LINE" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SCircularThrobber" value="&quot;SCircularThrobber&quot;: {&#10;    &quot;Period&quot;: 1&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SCircularThrobberExample" value="&quot;SCircularThrobber&quot;: {&#10;    &quot;Period&quot;: 2,&#10;    &quot;NumPieces&quot;: 10,&#10;    &quot;Radius&quot;: 80,&#10;    &quot;PieceImage&quot;:&#10;    {&#10;        &quot;Style&quot;: &quot;FChameleonStyle&quot;,&#10;        &quot;Brush&quot;: &quot;Resources.Chameleon_32x_png&quot;&#10;    }&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SProperty" value="&quot;SProperty&quot;:&#10;{&#10;    &quot;PropertyName&quot;: &quot;bNetLoadOnClient&quot;,&#10;    &quot;ShouldDisplayName&quot;: true&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="SPropertyExample" value="&quot;SProperty&quot;:&#10;{&#10;    &quot;PropertyName&quot;: &quot;bNetLoadOnClient&quot;,&#10;    &quot;ShouldDisplayName&quot;: true,&#10;    &quot;CustomWidget&quot;:{&#10;        &quot;STextBox&quot;: { &quot;Text&quot;: &quot;ABC&quot;}&#10;    }&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="Aliases CustomizationPanel" value="&quot;Aliases&quot;: {&#10;    &quot;$instance&quot;: &quot;ExampleObjectCustomization.ObjectCustomizationExample.ObjectCustomizationExample[%UniqueID]&quot;,&#10;    &quot;$UniqueID&quot;: &quot;UniqueID&quot;&#10;}," description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="Aliases" value="&quot;Aliases&quot;: {&#10;    &quot;$this_tool&quot;: &quot;PCG_Bridge.PCG_Bridge.PCG_Bridge()&quot;&#10;}," description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="command" value="@command&#10;def $COMMAND_NAME$(params) -&gt; ToolResult:&#10;    &quot;&quot;&quot;&#10;    $DESCRIPTION$&#10;    &#10;    Args:&#10;        params (dict): $PARAM_DESCRIPTION$&#10;    &#10;    Returns:&#10;        ToolResult: A dictionary containing the following keys:&#10;            - status (str): &quot;success&quot; if the operation is successful, otherwise &quot;error&quot;.&#10;            - result (list | None): $RESULT_DESCRIPTION$&#10;            - message (str): A human-readable message describing the result.&#10;    &#10;    Example:&#10;        $EXAMPLE$&#10;    &quot;&quot;&quot;&#10;    response = ToolResponse()&#10;&#10;    try:&#10;        # Your logic here&#10;        ...&#10;        $END$&#10;&#10;    except Exception as e:&#10;        response.add_error(str(e))&#10;    finally:&#10;        return response.to_dict()" description="mcp tool for TAPython" toReformat="false" toShortenFQNames="true">
+    <variable name="COMMAND_NAME" expression="" defaultValue="&quot;command_name&quot;" alwaysStopAt="true" />
+    <variable name="DESCRIPTION" expression="" defaultValue="&quot;DESCRIPTION&quot;" alwaysStopAt="true" />
+    <variable name="PARAM_DESCRIPTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="RESULT_DESCRIPTION" expression="" defaultValue="&quot;A List of ...&quot;" alwaysStopAt="true" />
+    <variable name="EXAMPLE" expression="" defaultValue="&quot;...&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python_Top_Level" value="true" />
+    </context>
+  </template>
+  <template name="OnTick" value="&quot;OnTick&quot;: &quot;$this_tool.on_tick()&quot;," description="On Tick Template Per Frame" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="OnTickWithInterval" value="&quot;OnTick&quot;: {&#10;    &quot;Cmd&quot;: &quot;$this_tool.on_tick()&quot;,&#10;    &quot;Interval&quot;: 0.2&#10;}," description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="ChameleonEditorMode" value="{&#10;&#9;&quot;EditorModeName&quot;: &quot;$tool_tab_name$&quot;,&#10;    &quot;InitPyCmd&quot;: &quot;import $Package$, importlib; importlib.reload($Package$); $your_tool_inst$ = $Package$.$your_module$.$your_class$(%JsonPath)&quot;,&#10;    &#10;    &quot;EditorModeOnDrag&quot;: &quot;$your_tool_inst$.on_drag(%input_ray, %mouse_button)&quot;,&#10;    &quot;Root&quot;: {&#10;        $Content$&#10;    }&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="tool_tab_name" expression="spaceSeparated(fileNameWithoutExtension())" defaultValue="" alwaysStopAt="true" />
+    <variable name="Package" expression="" defaultValue="&quot;somepackage&quot;" alwaysStopAt="true" />
+    <variable name="your_tool_inst" expression="" defaultValue="&quot;your_tool_instance&quot;" alwaysStopAt="true" />
+    <variable name="your_module" expression="fileNameWithoutExtension()" defaultValue="&quot;somemodule&quot;" alwaysStopAt="true" />
+    <variable name="your_class" expression="" defaultValue="&quot;someClass&quot;" alwaysStopAt="true" />
+    <variable name="Content" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JSON" value="true" />
+      <option name="JSON_PROPERTY_KEYS" value="false" />
+      <option name="JSON_STRING_VALUES" value="false" />
+    </context>
+  </template>
+  <template name="EditorModeOptions" value="    &quot;EditorModeOnClickStart&quot;: &quot;chameleon_editorModeDemo.on_press(%input_ray, %mouse_button)&quot;,&#10;    &quot;EditorModeOnClickEnd&quot;: &quot;chameleon_editorModeDemo.on_click_end(%input_ray, %mouse_button)&quot;,&#10;    &quot;EditorModeOnDrag&quot;: &quot;chameleon_editorModeDemo.on_drag(%input_ray, %mouse_button)&quot;,&#10;    &quot;EditorModeOnDragEnd&quot;: &quot;chameleon_editorModeDemo.on_drag_end(%input_ray, %mouse_button)&quot;,&#10;    &quot;EditorModeOnMouseWheel&quot;: &quot;chameleon_editorModeDemo.on_wheel(%)&quot;,&#10;    &#10;    &quot;OnTabContextMenu&quot;: {&#10;        &quot;name&quot;: &quot;🎯 Tutorial Menu&quot;,&#10;        &quot;items&quot;:&#10;        [&#10;        ]&#10;    },&#10;    &quot;OverViewport&quot;: {&#10;        &#10;    }&#10;        " description="" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="JSON" value="true" />
       <option name="JSON_PROPERTY_KEYS" value="false" />

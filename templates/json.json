@@ -1822,7 +1822,7 @@
     "MenuEntries": {
         "prefix": "MenuEntries",
         "body": [
-            "\"MenuEntries\": [${Aka}],",
+            "\"MenuEntries\": [\"${Aka}\"],",
             "\"Icon\": {\"style\": \"ChameleonStyle\", \"name\": \"Picture\" },"
         ],
         "description": ""
@@ -1838,6 +1838,170 @@
         "prefix": "Tile",
         "body": [
             "\"Tile\": \"${Tile}\""
+        ],
+        "description": ""
+    },
+    "IGNORE_THIS_LINE": {
+        "prefix": "IGNORE_THIS_LINE",
+        "body": [
+            "// #TAPYTHON_IGNORE_THIS_LINE"
+        ],
+        "description": ""
+    },
+    "SCircularThrobber": {
+        "prefix": "SCircularThrobber",
+        "body": [
+            "\"SCircularThrobber\": {",
+            "    \"Period\": 1",
+            "}"
+        ],
+        "description": ""
+    },
+    "SCircularThrobberExample": {
+        "prefix": "SCircularThrobberExample",
+        "body": [
+            "\"SCircularThrobber\": {",
+            "    \"Period\": 2,",
+            "    \"NumPieces\": 10,",
+            "    \"Radius\": 80,",
+            "    \"PieceImage\":",
+            "    {",
+            "        \"Style\": \"FChameleonStyle\",",
+            "        \"Brush\": \"Resources.Chameleon_32x_png\"",
+            "    }",
+            "}"
+        ],
+        "description": ""
+    },
+    "SProperty": {
+        "prefix": "SProperty",
+        "body": [
+            "\"SProperty\":",
+            "{",
+            "    \"PropertyName\": \"bNetLoadOnClient\",",
+            "    \"ShouldDisplayName\": true",
+            "}"
+        ],
+        "description": ""
+    },
+    "SPropertyExample": {
+        "prefix": "SPropertyExample",
+        "body": [
+            "\"SProperty\":",
+            "{",
+            "    \"PropertyName\": \"bNetLoadOnClient\",",
+            "    \"ShouldDisplayName\": true,",
+            "    \"CustomWidget\":{",
+            "        \"STextBox\": { \"Text\": \"ABC\"}",
+            "    }",
+            "}"
+        ],
+        "description": ""
+    },
+    "Aliases CustomizationPanel": {
+        "prefix": "Aliases CustomizationPanel",
+        "body": [
+            "\"Aliases\": {",
+            "    \"$instance\": \"ExampleObjectCustomization.ObjectCustomizationExample.ObjectCustomizationExample[%UniqueID]\",",
+            "    \"$UniqueID\": \"UniqueID\"",
+            "},"
+        ],
+        "description": ""
+    },
+    "Aliases": {
+        "prefix": "Aliases",
+        "body": [
+            "\"Aliases\": {",
+            "    \"$this_tool\": \"PCG_Bridge.PCG_Bridge.PCG_Bridge()\"",
+            "},"
+        ],
+        "description": ""
+    },
+    "command": {
+        "prefix": "command",
+        "body": [
+            "@command",
+            "def ${COMMAND_NAME}(params) -> ToolResult:",
+            "    \"\"\"",
+            "    ${DESCRIPTION}",
+            "    ",
+            "    Args:",
+            "        params (dict): ${PARAM_DESCRIPTION}",
+            "    ",
+            "    Returns:",
+            "        ToolResult: A dictionary containing the following keys:",
+            "            - status (str): \"success\" if the operation is successful, otherwise \"error\".",
+            "            - result (list | None): ${RESULT_DESCRIPTION}",
+            "            - message (str): A human-readable message describing the result.",
+            "    ",
+            "    Example:",
+            "        ${EXAMPLE}",
+            "    \"\"\"",
+            "    response = ToolResponse()",
+            "",
+            "    try:",
+            "        # Your logic here",
+            "        ...",
+            "        ${END}",
+            "",
+            "    except Exception as e:",
+            "        response.add_error(str(e))",
+            "    finally:",
+            "        return response.to_dict()"
+        ],
+        "description": "mcp tool for TAPython"
+    },
+    "OnTick": {
+        "prefix": "OnTick",
+        "body": [
+            "\"OnTick\": \"$this_tool.on_tick()\","
+        ],
+        "description": "On Tick Template Per Frame"
+    },
+    "OnTickWithInterval": {
+        "prefix": "OnTickWithInterval",
+        "body": [
+            "\"OnTick\": {",
+            "    \"Cmd\": \"$this_tool.on_tick()\",",
+            "    \"Interval\": 0.2",
+            "},"
+        ],
+        "description": ""
+    },
+    "ChameleonEditorMode": {
+        "prefix": "ChameleonEditorMode",
+        "body": [
+            "{",
+            "\t\"EditorModeName\": \"${tool_tab_name}\",",
+            "    \"InitPyCmd\": \"import ${Package}, importlib; importlib.reload(${Package}); ${your_tool_inst} = ${Package}.${your_module}.${your_class}(%JsonPath)\",",
+            "    ",
+            "    \"EditorModeOnDrag\": \"${your_tool_inst}.on_drag(%input_ray, %mouse_button)\",",
+            "    \"Root\": {",
+            "        ${Content}",
+            "    }",
+            "}"
+        ],
+        "description": ""
+    },
+    "EditorModeOptions": {
+        "prefix": "EditorModeOptions",
+        "body": [
+            "    \"EditorModeOnClickStart\": \"chameleon_editorModeDemo.on_press(%input_ray, %mouse_button)\",",
+            "    \"EditorModeOnClickEnd\": \"chameleon_editorModeDemo.on_click_end(%input_ray, %mouse_button)\",",
+            "    \"EditorModeOnDrag\": \"chameleon_editorModeDemo.on_drag(%input_ray, %mouse_button)\",",
+            "    \"EditorModeOnDragEnd\": \"chameleon_editorModeDemo.on_drag_end(%input_ray, %mouse_button)\",",
+            "    \"EditorModeOnMouseWheel\": \"chameleon_editorModeDemo.on_wheel(%)\",",
+            "    ",
+            "    \"OnTabContextMenu\": {",
+            "        \"name\": \"🎯 Tutorial Menu\",",
+            "        \"items\":",
+            "        [",
+            "        ]",
+            "    },",
+            "    \"OverViewport\": {",
+            "        ",
+            "    }",
+            "        "
         ],
         "description": ""
     }
